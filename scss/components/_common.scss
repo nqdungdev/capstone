@@ -1,0 +1,60 @@
+//background color
+.bg--day {
+    background-color: $bgPrimary-day;
+    transition: all ease 0.3s;
+}
+
+.bg--night {
+    background-color: $bgPrimary-night;
+    transition: all ease 0.3s;
+}
+
+.bg--white {
+    background-color: $bgWhite;
+    transition: all ease 0.3s;
+}
+
+.bg--light {
+    background-color: $bgLight;
+    transition: all ease 0.3s;
+}
+
+.bg--dark {
+    background-color: $bgDark;
+    transition: all ease 0.3s;
+}
+
+//text color
+.text-body {
+    @include text($fsBody, $tcPrimary-day, $fwNormal);
+    line-height: 2.7rem;
+    opacity: 0.8;
+    &--day {
+        color: $tcPrimary-day !important;
+        transition: all ease 0.2s;
+    }
+    &--night {
+        color: $tcPrimary-night !important;
+        transition: all ease 0.2s;
+    }
+}
+
+.title {
+    @include text($fsTitle, $tcTitle-day, $fwBold);
+    line-height: 4.5rem;
+    margin-bottom: 1.5rem;
+    &--day {
+        color: $tcTitle-day !important;
+        transition: all ease 0.2s;
+    }
+    &--night {
+        color: $tcTitle-night !important;
+        transition: all ease 0.2s;
+    }
+}
+
+.subTitle {
+    @include text($fsSubTitle, $tcSubTitle, $fwSemiBold);
+    line-height: 3rem;
+    text-transform: uppercase;
+}
