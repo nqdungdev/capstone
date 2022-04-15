@@ -23,8 +23,68 @@
 
 <body>
     <!-- HEADER -->
-
-
+    <header class="header bg--white d-flex align-items-center" id="header">
+        <div class="container h-100">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand header__logo title--day" href="#">
+                        <h1>
+                            <i class="fa fa-align-right me-1"></i>Corp Vision
+                        </h1>
+                        <span>Vision to your Future</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-lg-auto title--day">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Blog posts</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">404 page</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Landing page</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Elements page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- search -->
+                        <div class="btn header__search">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <!-- change theme -->
+                        <input type="checkbox" id="js-checkbox" class="d-none">
+                        <label for="js-checkbox" class="header__btn--theme" id="js-change">
+                            <i id="js-moon" class="fa fa-moon"></i>
+                            <i id="js-sun" class="fa fa-sun" style="display:none"></i>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

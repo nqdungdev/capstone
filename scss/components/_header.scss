@@ -1,1 +1,48 @@
 // HEADER
+.header {
+    height: 80px;
+    &__logo {
+        h1 {
+            @include text($fs9, inherit, $fwSemiBold);
+        }
+        span {
+            @include text($fs1, inherit, $fwSemiBold);
+            padding-left: 4.5rem;
+        }
+        i {
+            @include icon($fs9, $tcSecondary, $fwSemiBold, transparent, transparent, 0, 3.2rem);
+        }
+    }
+    .nav-item {
+        padding: 0 1rem;
+    }
+    .nav-link {
+        @include text($fs2, inherit !important, $fwSemiBold);
+        text-transform: uppercase;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
+        &.active {
+            color: $tcSecondary !important;
+        }
+    }
+    .dropdown-toggle::after {
+        content: "\f107";
+        font-family: FontAwesome;
+        border: none;
+        vertical-align: initial;
+    }
+    // search
+    &__search {
+        i {
+            @include icon($fs3, $tcWhite, $fwBold, $bgSecondary, transparent, 50%, 4.5rem);
+        }
+    }
+    //theme
+    &__btn--theme {
+        i {
+            @include icon($fs3, $tcPrimary-day, $fwBold, transparent, transparent, 50%, 4rem);
+        }
+    }
+}
