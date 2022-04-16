@@ -23,7 +23,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header bg--white d-flex align-items-center" id="header">
+    <header class="header bg--white js-change d-flex align-items-center" id="header">
         <div class="container h-100">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -34,9 +34,9 @@
                         <span>Vision to your Future</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon fa fa-bars"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-lg-auto title--day">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -48,10 +48,10 @@
                                 <a class="nav-link" href="#">Services</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                     Pages
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu bg--white title--day">
                                     <li class="dropdown-item">
                                         <a class="nav-link" href="#">Blog posts</a>
                                     </li>
@@ -70,16 +70,18 @@
                                 <a class="nav-link" href="#">Contact</a>
                             </li>
                         </ul>
-                        <!-- search -->
-                        <div class="btn header__search">
-                            <i class="fa fa-search"></i>
+                        <div class="header__right d-flex align-items-center">
+                            <!-- search -->
+                            <div class="btn header__search">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <!-- change theme -->
+                            <input type="checkbox" id="js-checkbox" class="d-none">
+                            <label for="js-checkbox" class="header__btn--theme text-body--day" id="js-change">
+                                <i id="js-moon" class="fa fa-moon"></i>
+                                <i id="js-sun" class="fa fa-sun" style="display:none"></i>
+                            </label>
                         </div>
-                        <!-- change theme -->
-                        <input type="checkbox" id="js-checkbox" class="d-none">
-                        <label for="js-checkbox" class="header__btn--theme" id="js-change">
-                            <i id="js-moon" class="fa fa-moon"></i>
-                            <i id="js-sun" class="fa fa-sun" style="display:none"></i>
-                        </label>
                     </div>
                 </div>
             </nav>

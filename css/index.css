@@ -110,7 +110,11 @@ a {
 }
 
 .header {
-  height: 80px;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .header__logo h1 {
@@ -143,6 +147,7 @@ a {
 }
 
 .header .nav-item {
+  position: relative;
   padding: 0 1rem;
 }
 
@@ -167,6 +172,68 @@ a {
   font-family: FontAwesome;
   border: none;
   vertical-align: initial;
+  margin: 0;
+}
+
+.header .dropdown-menu {
+  padding: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #3f3a64;
+  min-width: 19rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header .dropdown-menu::before {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: inherit;
+  border-top: 1px solid #3f3a64;
+  border-left: 1px solid #3f3a64;
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.header .dropdown-item {
+  color: inherit;
+  padding: 0 2rem;
+}
+
+.header .navbar-toggler {
+  background-color: #009f4d;
+  padding: 0;
+}
+
+.header .navbar-toggler span {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  width: 3.4rem;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.header .navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.header .navbar-toggler-icon {
+  background-image: none;
 }
 
 .header__search i {
@@ -187,7 +254,7 @@ a {
 
 .header__btn--theme i {
   font-size: 1.6rem;
-  color: #666;
+  color: inherit;
   font-weight: 700;
   width: 4rem;
   height: 4rem;
@@ -199,5 +266,13 @@ a {
   cursor: pointer;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+}
+
+@media screen and (max-width: 992px) {
+  .header__right {
+    position: absolute;
+    top: 1rem;
+    right: 4.5rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

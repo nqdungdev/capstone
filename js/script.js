@@ -3,6 +3,12 @@ checkBox.addEventListener('click', function () {
     if (checkBox.checked) {
         document.getElementById('js-moon').style.display = "none"
         document.getElementById('js-sun').style.display = "block"
+        // var changeThemes =  document.querySelectorAll('.js-change')
+        // for (var changeTheme of changeThemes){
+        //    if(changeTheme.attributes['style'].textContent === "background-color: #fff;")
+        //    changeTheme.attributes['style'].textContent='background-color: #100f19;' 
+           
+        // }
         var bgColors = document.querySelectorAll('.bg--white')
         for (var bgColor of bgColors) {
             bgColor.classList.remove('bg--white')
@@ -13,11 +19,19 @@ checkBox.addEventListener('click', function () {
             textColor.classList.remove('title--day')
             textColor.classList.add('title--night')
         }
+        var textBodyColors = document.querySelectorAll('.text-body--day')
+        for (var textBodyColor of textBodyColors) {
+            textBodyColor.classList.remove('text-body--day')
+            textBodyColor.classList.add('text-body--night')
+        }
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
-        // changeTheme("bg--dark","bg--white");
-        // changeTheme("title--night","title--day");
+        // var changeThemes =  document.querySelectorAll('.js-change')
+        // for (var changeTheme of changeThemes){
+        //    if(changeTheme.attributes['style'].textContent === "background-color: #100f19;")
+        //    changeTheme.attributes['style'].textContent='background-color: #fff;'            
+        // }
         var bgColors = document.querySelectorAll('.bg--dark')
         for (var bgColor of bgColors) {
             bgColor.classList.remove('bg--dark')
@@ -27,6 +41,11 @@ checkBox.addEventListener('click', function () {
         for (var textColor of textColors) {
             textColor.classList.remove('title--night')
             textColor.classList.add('title--day')
+        }
+        var textBodyColors = document.querySelectorAll('.text-body--night')
+        for (var textBodyColor of textBodyColors) {
+            textBodyColor.classList.remove('text-body--night')
+            textBodyColor.classList.add('text-body--day')
         }
     }
 });
