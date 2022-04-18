@@ -23,8 +23,185 @@
 
 <body>
     <!-- HEADER -->
+    <header class="header js-change d-flex align-items-center" id="header">
+        <div class="container ">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand header__logo title--night header__title" href="#">
+                        <h1>
+                            <i class="fa fa-align-right me-1"></i>Corp Vision
+                        </h1>
+                        <span>Vision to your Future</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-lg-auto title--night header__title">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu title--night header__title">
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Blog posts</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">404 page</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Landing page</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a class="nav-link" href="#">Elements page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="header__right d-flex align-items-center">
+                            <!-- search -->
+                            <div class="btn header__search">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <!-- change theme -->
+                            <input type="checkbox" id="js-checkbox" class="d-none">
+                            <label for="js-checkbox" class="header__btn--theme text-body--day" id="js-change">
+                                <i id="js-moon" class="fa fa-moon"></i>
+                                <i id="js-sun" class="fa fa-sun" style="display:none"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="container w-100 h-100 text-center">
+            <div class="banner__content">
+                <h1>Contact us</h1>
+                <p>We are an agency located in New York</p>
+            </div>
+        </div>
+        <div class="banner__overlay">
+        </div>
+    </section>
+    <!-- CONTACT-SECTION -->
+    <section class="contact-section bg-light">
+        <header class="contact-section__title text-center mb-md-5 mb-4">
+            <div class="container">
+                <h1 class="title title--day">We are a full-service creative agency</h1>
+                <p class="text-body text-body--day mt-2">Aurabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est. Quisque ut lectus consequat, eros et. </p>
+            </div>
+        </header>
+
+        <main class="contact-section__items">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-section__item bg--white p-5 d-flex">
+                            <div class="contact-section__item__icon">
+                                <i class="fa fa-map"></i>
+                            </div>
+                            <div class="contact-section__item__text">
+                                <h1 class="title--day">Our Location:</h1>
+                                <p class="text-body text-body--day">Corp Vision, 343 marketing, #21 cravel 1st street, NY - 62617.</p>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                        <div class="contact-section__item bg--white p-5 d-flex">
+                            <div class="contact-section__item__icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <div class="contact-section__item__text">
+                                <h1 class="title--day">Give us a call</h1>
+                                <p><a class="text-body text-body--day" href="tel:+12 404-11-22-89">
+                                        +12 404-11-22-89</a></p>
+                                <p><a class="text-body text-body--day" href="tel:+12 404-11-22-99">
+                                        +12 404-11-22-99</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                        <div class="contact-section__item bg--white p-5 d-flex">
+                            <div class="contact-section__item__icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-section__item__text">
+                                <h1 class="title--day">Help Desk</h1>
+                                <p> <a class="text-body text-body--day" href="mailto:company@gmail.com">
+                                        company@gmail.com</a></p>
+                                <p> <a class="text-body text-body--day" href="mailto:support@gmail.com">
+                                        support@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- CONTACT-MAP -->
+    <section class="contact-map bg--light">
+        <div class="container">
+            <div class="contact-map__content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059445135!2d-74.25986613799748!3d40.69714941774136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e3!4m0!4m0!5e0!3m2!1sen!2sin!4v1570181661801!5m2!1sen!2sin" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT-FORM -->
+    <section class="contact-form bg--light">
+        <header class="contact-form__title text-center mb-md-5 mb-4">
+            <div class="container">
+                <h1 class="title title--day">Let's talk about your project</h1>
+                <p class="text-body text-body--day mt-2">We have made it easy for clients to reach us and get their solutions weaved</p>
+            </div>
+        </header>
+        <main class="contact-form__content">
+            <div class="container">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="phone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="email" name="email" placeholder="Email*">
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control mt-3 mb-5" name="message" placeholder="Message*"></textarea>
+                        </div>
+                        <div class="col-12 text-center text-lg-end">
+                            <button type="submit" class="btn btn-submit w-sm-100">
+                                Submit Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </section>
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
