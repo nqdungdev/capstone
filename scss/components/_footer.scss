@@ -1,1 +1,83 @@
 // FOOTER
+.footer {
+  background: $bgDark;
+  .footer__main {
+    padding: 30px 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgba(249, 249, 249, 0.1);
+    .container {
+     .item{
+        .footer__brand {
+          display: block;
+          color: $bgWhite;
+          .logo {
+            display: flex;
+            align-items: center;
+            i {
+              padding-right: 12px;
+              color: $bgSecondary;
+              font-size: 30px;
+            }
+            h1 {
+              @include text($fs6, $tcWhite, $fwSemiBold);
+            }
+          }
+          span {
+            @include text($fsMd, $tcWhite, $fwSemiBold);
+            opacity: 0.9;
+            margin-left: 40px;
+          }
+        }
+        p {
+          @include text($fsMd, $tcFooterMain, $fwNormal);
+          line-height: 1.75rem;
+          width: 88%;
+          margin-bottom: 0.5rem;
+        }
+        .icon {
+          a {
+            margin-right: 1rem;
+            opacity: 0.6;
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+        .footer__title {
+          @include text($fsLg, $tcWhite, $fwNormal);
+          text-transform: uppercase;
+          letter-spacing: 0.5;
+          margin-bottom: 1.5rem;
+          line-height: 1.75rem;
+        }
+        a {
+          @include text($fsMd, $tcFooterMain, $fwNormal);
+          transition: all 0.3s;
+          opacity: 0.8;
+          line-height: 1.75rem;
+          &:hover {
+            color: $tcWhite;
+            opacity: 1;
+          }
+        }
+     }
+    }
+  }
+  footer {
+    padding: 30px 0;
+    p {
+      letter-spacing: 0.5px;
+      @include text($fsBase, $tcFooterEnd, $fwNormal);
+      text-align: center;
+      a{
+        @include text($fsBase, $tcSecondary, $fwNormal);
+        transition: all 0.3s;
+        &:hover {
+            color: $tcWhite;
+            opacity: 1;
+          }
+      }
+    }
+  }
+}

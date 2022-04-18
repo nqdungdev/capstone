@@ -58,3 +58,23 @@
     line-height: 3rem;
     text-transform: uppercase;
 }
+
+.backToTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    background: $bgSecondary;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 10;
+    i{
+        color: $bgWhite;
+        font-size: $fsBase;
+        line-height: 50px;
+    }
+}
