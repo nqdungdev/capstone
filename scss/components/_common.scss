@@ -60,21 +60,19 @@
 }
 
 .backToTop{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border: none;
-    width: 50px;
-    height: 50px;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-    background: $bgSecondary;
-    text-align: center;
-    border-radius: 50%;
-    z-index: 10;
     i{
-        color: $bgWhite;
-        font-size: $fsBase;
-        line-height: 50px;
+        position: fixed;
+        @include icon($fs2, $bgWhite, $fwBold, $bgSecondary, none, 50%, 5rem);
+        right: 2rem;
+        bottom: 2rem;
+        // border: none;
+        // width: 5rem;
+        // height: 5rem;
+        // transition: all 0.3s ease-out;
+        // cursor: pointer;
+        // background: $bgSecondary;
+        // text-align: center;
+        // border-radius: 50%;
+        z-index: 10;
     }
 }
