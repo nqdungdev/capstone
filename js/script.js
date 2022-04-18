@@ -59,7 +59,8 @@ const changeText = (prevClass,nextClass) => {
 window.addEventListener("scroll", function () {
     var headerBg = this.document.getElementById('header');
     var headerTitles = this.document.getElementsByClassName('header__title');
-  if(pageYOffset>=50){
+    console.log(document.documentElement.scrollTop);
+  if(document.documentElement.scrollTop>=50){
        headerBg.style.height="8rem";
       if(!checkBox.checked){
         headerBg.classList.add('bg--white');
@@ -74,7 +75,7 @@ window.addEventListener("scroll", function () {
     }
       }   
      
-  } else if(pageYOffset<50){
+  } else if(document.documentElement.scrollTop<50){
           headerBg.classList.remove('bg--white');
           headerBg.classList.remove('bg--dark');
         headerBg.style.height="10rem";
@@ -96,19 +97,19 @@ window.addEventListener("scroll", function () {
 var mybutton = document.querySelector(".backToTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
 
-mybutton.addEventListener("click", function() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-});
+// mybutton.addEventListener("click", function() {
+//   document.body.scrollTop = 0; // For Safari
+//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// });
