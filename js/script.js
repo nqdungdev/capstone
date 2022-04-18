@@ -60,7 +60,7 @@ window.addEventListener("scroll", function () {
     var headerBg = this.document.getElementById('header');
     var headerTitles = this.document.getElementsByClassName('header__title');
     console.log(document.documentElement.scrollTop);
-  if(pageYOffset>=50){
+  if(document.documentElement.scrollTop>=50){
        headerBg.style.height="8rem";
       if(!checkBox.checked){
         headerBg.classList.add('bg--white');
@@ -75,7 +75,7 @@ window.addEventListener("scroll", function () {
     }
       }   
      
-  } else if(pageYOffset<50){
+  } else if(document.documentElement.scrollTop<50){
           headerBg.classList.remove('bg--white');
           headerBg.classList.remove('bg--dark');
         headerBg.style.height="10rem";
