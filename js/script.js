@@ -1,3 +1,4 @@
+
 var checkBox = document.getElementById('js-checkbox')
 checkBox.addEventListener('click', function () {
     if (checkBox.checked) {
@@ -85,17 +86,7 @@ window.addEventListener("scroll", function () {
         headerTitle.classList.add('title--night')}
     
   }
-  
-//   document.getElementById("translate-1").style.transform =
-//     "translate3d(0, " + `${x * 0.14}px` + ", 0)";
-//   document.getElementById("translate-2").style.transform =
-//     "translate3d(0, " + `${x * 0.2}px` + ", 0)";
-//   document.getElementById("translate-3").style.transform =
-//     "translate3d(0, " + `${x * -0.2}px` + ", 0)";
 });
-
-
-
 
 
 var mybutton = document.querySelector(".backToTop");
