@@ -8,3 +8,7 @@
 @import "./components/common";
 @import "./components/header";
 @import "./components/footer";
+body {
+    height: 200vh;
+    background-color: green;
+}

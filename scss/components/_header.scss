@@ -1,8 +1,13 @@
 // HEADER
 .header {
+    @include size(100%, 10rem);
     // height: 80px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-    height: max-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all ease 0.3s;
+    // height: max-content;
     &__logo {
         h1 {
             @include text($fs9, inherit, $fwSemiBold);
@@ -38,6 +43,7 @@
         margin: 0;
     }
     .dropdown-menu {
+        background-color: transparent;
         padding: 1rem 0;
         border-radius: 8px;
         border: 1px solid $tcTitle-day;
@@ -55,11 +61,15 @@
             top: -0.7rem;
             left: 50%;
             transform: translateX(-50%) rotate(45deg);
+            z-index: 1;
         }
     }
     .dropdown-item {
         color: inherit;
         padding: 0 2rem;
+        &:hover {
+            background-color: transparent !important;
+        }
     }
     .navbar-toggler {
         background-color: $bgSecondary;
