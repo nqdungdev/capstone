@@ -113,6 +113,26 @@ a {
   text-transform: uppercase;
 }
 
+.backToTop i {
+  position: fixed;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background-color: #009f4d;
+  border: 1px solid none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 10;
+}
+
 .banner {
   background: url(../img/b1.jpg) top center/cover no-repeat;
   padding: 5rem 0;
