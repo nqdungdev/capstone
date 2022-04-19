@@ -1,13 +1,12 @@
 // HEADER
 .header {
     @include size(100%, 10rem);
-    // height: 80px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 6px 0 $bgShadowDark;
     position: fixed;
     top: 0;
     left: 0;
     transition: all ease 0.3s;
-    // height: max-content;
+    z-index: 100;
     &__logo {
         h1 {
             @include text($fs9, inherit, $fwSemiBold);
@@ -20,75 +19,71 @@
             @include icon($fs9, $tcSecondary, $fwSemiBold, transparent, transparent, 0, 3.2rem);
         }
     }
-    .nav-item {
-        position: relative;
-        padding: 0 1rem;
-    }
-    .nav-link {
-        @include text($fs2, inherit !important, $fwSemiBold);
-        text-transform: uppercase;
-        opacity: 0.7;
-        &:hover {
-            opacity: 1;
-        }
-        &.active {
-            color: $tcSecondary !important;
-        }
-    }
-    .dropdown-toggle::after {
-        content: "\f107";
-        font-family: FontAwesome;
-        border: none;
-        vertical-align: initial;
-        margin: 0;
-    }
-    .dropdown-menu {
-        background-color: transparent;
-        padding: 1rem 0;
-        border-radius: 8px;
-        border: 1px solid $tcTitle-day;
-        min-width: 19rem;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        &::before {
-            content: "";
-            @include size(1.4rem, 1.4rem);
-            background-color: inherit;
-            border-top: 1px solid $tcTitle-day;
-            border-left: 1px solid $tcTitle-day;
-            position: absolute;
-            top: -0.7rem;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-            z-index: 1;
-        }
-    }
-    .dropdown-item {
-        color: inherit;
-        padding: 0 2rem;
-        &:hover {
-            background-color: transparent !important;
-        }
-    }
-    .navbar-toggler {
-        background-color: $bgSecondary;
-        padding: 0;
-        span {
-            @include icon($fs7, $tcWhite, $fwSemiBold, transparent, transparent, 0, 3.4rem);
-        }
-        &:focus {
-            outline: none;
-            box-shadow: none;
-        }
-    }
-    .navbar-toggler-icon {
-        background-image: none;
-    }
     // search
     &__search {
+        transform: scale(1);
+        transition: all ease 0.5s;
         i {
             @include icon($fs3, $tcWhite, $fwBold, $bgSecondary, transparent, 50%, 4.5rem);
+        }
+        &--spread {
+            transform: scale(500);
+            transition: all ease 0.5s;
+            ~.header__search__form {
+                i {
+                    transform: rotate(0);
+                    transition: all ease 0.4s;
+                }
+                input {
+                    transform: translateX(0);
+                    transition: all ease 0.4s;
+                }
+            }
+        }
+        &__form {
+            @include size(100%, 100vh);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            z-index: 10;
+            transition: all ease 0.4s;
+            i {
+                font-size: $fsBigIcon;
+                color: $tcWhite;
+                position: absolute;
+                top: 10%;
+                right: 5%;
+                cursor: pointer;
+                z-index: 11;
+                transform: rotate(90deg);
+                transition: all ease 0.4s;
+            }
+            input {
+                @include size(100%, 100vh);
+                @include text($fsSearch, $tcWhite, $fwNormal);
+                border: 0;
+                background: transparent;
+                -webkit-appearance: none;
+                outline: 0;
+                transform: translateX(10%);
+                transition: all ease 0.4s;
+                &::-webkit-input-placeholder {
+                    @include text($fsSearch, $tcWhite, $fwLight);
+                }
+                &::-moz-placeholder {
+                    @include text($fsSearch, $tcWhite, $fwLight);
+                }
+                &:-ms-input-placeholder {
+                    @include text($fsSearch, $tcWhite, $fwLight);
+                }
+                &::-ms-input-placeholder {
+                    @include text($fsSearch, $tcWhite, $fwLight);
+                }
+                &::placeholder {
+                    @include text($fsSearch, $tcWhite, $fwLight);
+                }
+            }
         }
     }
     //theme
@@ -98,6 +93,9 @@
         }
     }
     @include responsive($lg) {
+        height: -webkit-max-content !important;
+        height: -moz-max-content !important;
+        height: max-content !important;
         &__right {
             position: absolute;
             top: 1rem;

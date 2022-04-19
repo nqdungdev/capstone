@@ -23,7 +23,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header js-change d-flex align-items-center" id="header">
+    <header class="header d-flex align-items-center" id="header">
         <div class="container ">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -34,8 +34,8 @@
                         <span>Vision to your Future</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon fa fa-bars"></span>
-          </button>
+                        <span class="navbar-toggler-icon fa fa-bars"></span>
+                    </button>
                     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-lg-auto title--night header__title">
                             <li class="nav-item">
@@ -49,9 +49,9 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                  Pages
-                </a>
-                                <ul class="dropdown-menu title--night header__title">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu title--day bg--white">
                                     <li class="dropdown-item">
                                         <a class="nav-link" href="#">Blog posts</a>
                                     </li>
@@ -73,99 +73,108 @@
                         <div class="header__right d-flex align-items-center">
                             <!-- search -->
                             <div class="btn header__search">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" id="js-search"></i>
                             </div>
                             <!-- change theme -->
                             <input type="checkbox" id="js-checkbox" class="d-none">
                             <label for="js-checkbox" class="header__btn--theme text-body--day" id="js-change">
-                <i id="js-moon" class="fa fa-moon"></i>
-                <i id="js-sun" class="fa fa-sun" style="display:none"></i>
-              </label>
+                                <i id="js-moon" class="fa fa-moon"></i>
+                                <i id="js-sun" class="fa fa-sun" style="display:none"></i>
+                            </label>
+                        </div>
+                        <!-- search from -->
+                        <div class="header__search__form" style="visibility: hidden;">
+                            <i class="fa fa-times btn--close"></i>
+                            <form>
+                                <input name="search" placeholder="Start Typing" type="text">
+                            </form>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- CAROUSEL -->
+    <section class="carousel" style="height: 100vh; background-color: black;"></section>
     <!-- FOOTER -->
-    <!-- <footer class="footer">
-            <main class="footer__main py-md-5">
-                <div class="container p-4 pb-md-5">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="item">
-                                <div class="footer__brand mb-4">
-                                    <a href="#">
-                                        <div class="logo">
-                                            <i class="fa fa-align-right"></i>
-                                            <h1>Corp Vision</h1>
-                                        </div>
-                                        <span>Vision to your Future</span>
-                                    </a>
-                                </div>
-                                <p>
-                                    Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet Semper at elit team advisors.
-                                </p>
-                                <div class="icon mt-md-4 mt-3">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+    <footer class="footer">
+        <main class="footer__main py-md-5">
+            <div class="container p-4 pb-md-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="item">
+                            <div class="footer__brand mb-4">
+                                <a href="#">
+                                    <div class="logo">
+                                        <i class="fa fa-align-right"></i>
+                                        <h1>Corp Vision</h1>
+                                    </div>
+                                    <span>Vision to your Future</span>
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
-                            <div class="item">
-                                <h1 class="footer__title">CONTACT INFO</h1>
-                                <p>
-                                    Address : Corp Vision, 343 marketing, #21 cravel 1st lane street, NY - 62617.
-                                </p>
-                                <p>
-                                    Phone Number :
-                                    <a class="contact-href" href="tel:+1(21) 234 4567">+1(21) 234 4567</a>
-                                </p>
-                                <p>
-                                    Email: <a class="contact-href" href="mailto:info@example.com">info@example.com</a>
-                                </p>
-                                <p>
-                                    Support:
-                                    <a class="contact-href" href="mailto:info@support.com">info@support.com</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-2 mt-lg-0 mt-5">
-                            <div class="item">
-                                <h1 class="footer__title">CATEGORIES</h1>
-                                <p><a href="#">Marketing Strategy</a></p>
-                                <p><a href="#">Startup Business</a></p>
-                                <p><a href="#">Web development</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-lg-2 mt-lg-0 mt-5">
-                            <div class="item">
-                                <h1 class="footer__title">META</h1>
-                                <p><a href="#">Log in</a></p>
-                                <p><a href="#">Entries feed</a></p>
-                                <p><a href="#">Comments feed</a></p>
-                                <p><a href="#">WordPress.org</a></p>
+                            <p>
+                                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet Semper at elit team advisors.
+                            </p>
+                            <div class="icon mt-md-4 mt-3">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="item">
+                            <h1 class="footer__title">CONTACT INFO</h1>
+                            <p>
+                                Address : Corp Vision, 343 marketing, #21 cravel 1st lane street, NY - 62617.
+                            </p>
+                            <p>
+                                Phone Number :
+                                <a class="contact-href" href="tel:+1(21) 234 4567">+1(21) 234 4567</a>
+                            </p>
+                            <p>
+                                Email: <a class="contact-href" href="mailto:info@example.com">info@example.com</a>
+                            </p>
+                            <p>
+                                Support:
+                                <a class="contact-href" href="mailto:info@support.com">info@support.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 mt-lg-0 mt-5">
+                        <div class="item">
+                            <h1 class="footer__title">CATEGORIES</h1>
+                            <p><a href="#">Marketing Strategy</a></p>
+                            <p><a href="#">Startup Business</a></p>
+                            <p><a href="#">Web development</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-2 mt-lg-0 mt-5">
+                        <div class="item">
+                            <h1 class="footer__title">META</h1>
+                            <p><a href="#">Log in</a></p>
+                            <p><a href="#">Entries feed</a></p>
+                            <p><a href="#">Comments feed</a></p>
+                            <p><a href="#">WordPress.org</a></p>
+                        </div>
+                    </div>
                 </div>
-            </main>
-            <footer>
-                <div class="container">
-                    <p>
-                        © 2022 Corp Vision All Rights Reserved | WordPress Theme by
-                        <a href="#">W3Layouts.</a>
-                    </p>
-                </div>
-            </footer>
-        </footer> -->
-    <!-- <div class="backToTop">
-            <a href="#"><i class="fa fa-angle-up" title="Go to top"></i></a>
-        </div> -->
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    © 2022 Corp Vision All Rights Reserved | WordPress Theme by
+                    <a href="#">W3Layouts.</a>
+                </p>
+            </div>
+        </footer>
+    </footer>
+    <div class="backToTop">
+        <a href="#"><i class="fa fa-angle-up" title="Go to top"></i></a>
+    </div>
 
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
