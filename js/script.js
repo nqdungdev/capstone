@@ -86,7 +86,6 @@ btnClose.addEventListener('click',function(){
     document.querySelector('.header__search').classList.remove('header__search--spread')
 })
 
-
 var mybutton = document.querySelector(".backToTop");
 
 // When the user scrolls down 20px from the top of the document, show the button

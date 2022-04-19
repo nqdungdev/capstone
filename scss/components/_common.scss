@@ -64,8 +64,8 @@
     text-transform: uppercase;
 }
 
-.backToTop {
-    i {
+.backToTop{
+    i{
         position: fixed;
         @include icon($fs2, $bgWhite, $fwBold, $bgSecondary, none, 50%, 5rem);
         right: 2rem;
