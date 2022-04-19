@@ -9,6 +9,7 @@ $bgBlue: #213364; //sidebar-right, dot
 $bgGreen-500:#00a63f; //button
 $bgGreen-700:#008030;
 $bgGreen-800:#00732c;
+$bgShadowDark:rgba(0, 0, 0, 0.05);
 // text color
 $tcPrimary-day: #666; //paragraph
 $tcPrimary-night: #c2c2c2;
@@ -17,12 +18,9 @@ $tcWhite:#fff;
 $tcTitle-day:#3f3a64; //title
 $tcTitle-night:#eee;
 $tcSubTitle:#7e7d7d; //subtitle
-
 $tcGray:#404040;
-
 $tcFooterMain: #97a1a9;
 $tcFooterEnd: #7f8a94;
-
 // font size
 
 $fsBigTitle:5.5rem;
@@ -38,10 +36,11 @@ $fs6:1.9rem;
 $fs7:2rem;
 $fs8:2.2rem;
 $fs9:3.2rem; //logo
-
 $fs10:4rem;
-
 $fsFooterLogo: 3rem;
+$fsSearch:5.4rem;
+$fsBigIcon:7rem;
+
 // font weight
 $fwLight:300;
 $fwNormal:400;

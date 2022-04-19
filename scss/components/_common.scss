@@ -14,12 +14,17 @@
     transition: all ease 0.3s;
 }
 
+.bg--dark {
+    background-color: $bgDark;
+    transition: all ease 0.3s;
+}
+
 .bg--light {
     background-color: $bgLight;
     transition: all ease 0.3s;
 }
 
-.bg--dark {
+.bg--dark-1 {
     background-color: $bgDark;
     transition: all ease 0.3s;
 }
