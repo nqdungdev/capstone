@@ -15,7 +15,7 @@
 }
 
 .bg--dark {
-    background-color: $bgDark;
+    background-color: $bgDark !important;
     transition: all ease 0.3s;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .bg--dark-1 {
-    background-color: $bgDark;
+    background-color: $bgPrimary-night;
     transition: all ease 0.3s;
 }
 
@@ -64,8 +64,8 @@
     text-transform: uppercase;
 }
 
-.backToTop{
-    i{
+.backToTop {
+    i {
         position: fixed;
         @include icon($fs2, $bgWhite, $fwBold, $bgSecondary, none, 50%, 5rem);
         right: 2rem;
