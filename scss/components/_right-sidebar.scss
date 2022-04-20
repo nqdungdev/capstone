@@ -20,7 +20,7 @@
       justify-content: space-around;
       border-top: 1px solid $bgDark-300;
       a {
-          @include text($fs3, $tcWhite-300, $fwNormal);
+        @include text($fs3, $tcWhite-300, $fwNormal);
         opacity: 0.7;
         transition: all 0.3s;
         i {
@@ -41,14 +41,15 @@
     position: absolute;
     top: 1rem;
     right: 50%;
-    @include icon($fs3, $tcWhite-300, $fwBold,rgba(13, 19, 38, 0.5), none, 50%, 5rem );
+    // @include icon($fs3, $tcWhite-300, $fwBold,rgba(13, 19, 38, 0.5), none, 50%, 5rem );
     transform: translateX(50%);
     z-index: 100;
-    // background: rgba(13, 19, 38, 0.5);
-    // width: 5rem;
-    // height: 5rem;
-    // border-radius: 50%;
-    // text-align: center;
+    background: rgba(13, 19, 38, 0.5);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
     i {
       line-height: 5rem;
     }

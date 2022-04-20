@@ -597,22 +597,15 @@ a {
   position: absolute;
   top: 1rem;
   right: 50%;
-  font-size: 1.6rem;
-  color: #e6ebff;
-  font-weight: 700;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  background-color: rgba(13, 19, 38, 0.5);
-  border: 1px solid none;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: all ease 0.4s;
-  transition: all ease 0.4s;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   z-index: 100;
+  background: rgba(13, 19, 38, 0.5);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .right-sidebar .button-sidebar i {
