@@ -105,3 +105,11 @@ mybutton.addEventListener("click", function() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+// right-sidebar
+const allSideBar = document.querySelector('.all-sidebar');
+const buttonSideBar = document.querySelector('.button-sidebar');
+buttonSideBar.addEventListener('click', function(){
+    buttonSideBar.classList.toggle('animate-button');
+    allSideBar.classList.toggle('animate-sidebar');
+})
