@@ -64,6 +64,32 @@
     text-transform: uppercase;
 }
 
+//button green
+.btn--success {
+    @include button($fs3, $tcWhite, $fwSemiBold, $bgSecondary, $bgSecondary, 1.5rem 5rem, 0.8rem);
+    transition: all ease 0.3s;
+    &:hover {
+        color: $tcWhite;
+        background-color: $bgGreen-700;
+        border-color: $bgGreen-800;
+    }
+}
+
+//input
+.input--config {
+    @include size(100%, 6rem);
+    @include text($fs5, $tcPrimary-day, $fwNormal);
+    padding: 0 2.5rem;
+    border: 1px solid $tcTitle-night;
+    border-radius: 0.8rem;
+    line-height: 5rem;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $tcTitle-day;
+    }
+}
+
 .backToTop {
     i {
         position: fixed;
