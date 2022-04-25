@@ -81,3 +81,19 @@
         z-index: 10;
     }
 }
+
+.button-style{
+    padding: 1.5rem 5rem;
+    font-size: $fs3;
+    line-height: 1.8rem;
+    font-weight: $fwSemiBold;
+    border-radius: 0.8rem;
+    border: none;
+    background: $bgGreen-500;
+    color: $tcWhite;
+    transition: all 0.5s;
+    &:hover{
+        background-color: $bgGreen-700;
+        border-color: $bgGreen-800;
+    }
+}
