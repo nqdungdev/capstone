@@ -166,6 +166,18 @@ a {
   transition: all ease 0.3s;
 }
 
+.bg-servicepage {
+  background-color: rgba(29, 42, 55, 0.7);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.bg-servicepage-change {
+  background-color: rgba(29, 42, 55, 0.8);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .text-body {
   font-size: 1.7rem;
   color: #666;
@@ -755,14 +767,13 @@ a {
   position: relative;
 }
 
-.contact::before {
+.contact .contact__overlay {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
-  background: rgba(29, 42, 55, 0.7);
 }
 
 .contact .col-left,
@@ -889,6 +900,14 @@ a {
 
 .duty__main .item {
   padding: 4rem;
+  border-radius: 0.8rem;
+}
+
+.duty__main .item:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+  -webkit-box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
+          box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
 }
 
 .duty__main .item img {
@@ -914,5 +933,9 @@ a {
   h1 {
     padding: 0 !important;
   }
+}
+
+.backgound-click-services {
+  background: rgba(29, 42, 55, 0.8);
 }
 /*# sourceMappingURL=services.css.map */

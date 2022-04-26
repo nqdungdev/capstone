@@ -166,6 +166,18 @@ a {
   transition: all ease 0.3s;
 }
 
+.bg-servicepage {
+  background-color: rgba(29, 42, 55, 0.7);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.bg-servicepage-change {
+  background-color: rgba(29, 42, 55, 0.8);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .text-body {
   font-size: 1.7rem;
   color: #666;

@@ -29,6 +29,16 @@
     transition: all ease 0.3s;
 }
 
+.bg-servicepage{
+    background-color: rgba(29, 42, 55, 0.7);
+    transition: all ease 0.3s;
+}
+
+.bg-servicepage-change{
+    background-color: rgba(29, 42, 55, 0.8);
+    transition: all ease 0.3s;
+}
+
 //text color
 .text-body {
     @include text($fsBody, $tcPrimary-day, $fwNormal);

@@ -8,6 +8,7 @@ checkBox.addEventListener('click', function () {
         changeBg("bg--light", "bg--dark-1")
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
+        changeBg('bg-servicepage', 'bg-servicepage-change');
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
@@ -16,6 +17,7 @@ checkBox.addEventListener('click', function () {
         changeBg("bg--dark-1", "bg--light")
         changeText("title--night", "title--day")
         changeText("text-body--night", "text-body--day")
+        changeBg('bg-servicepage-change', 'bg-servicepage');
     }
 });
 
@@ -113,3 +115,7 @@ buttonSideBar.addEventListener('click', function(){
     buttonSideBar.classList.toggle('animate-button');
     allSideBar.classList.toggle('animate-sidebar');
 })
+
+//services
+
+
