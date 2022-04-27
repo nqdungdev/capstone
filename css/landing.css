@@ -52,10 +52,6 @@ a {
   opacity: 1;
 }
 
-.header .nav-link.active {
-  color: #009f4d !important;
-}
-
 .header .dropdown-toggle::after {
   content: "\f107";
   font-family: FontAwesome;
@@ -166,6 +162,18 @@ a {
   transition: all ease 0.3s;
 }
 
+.bg-overlay--day {
+  background-color: rgba(29, 42, 55, 0.7);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.bg-overlay--night {
+  background-color: rgba(29, 42, 55, 0.8);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .text-body {
   font-size: 1.7rem;
   color: #666;
@@ -206,12 +214,74 @@ a {
   transition: all ease 0.2s;
 }
 
+.title--secondary {
+  color: #009f4d !important;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
 .subTitle {
   font-size: 1.4rem;
   color: #7e7d7d;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
+}
+
+.btn--success {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  background-color: #009f4d;
+  border: 1px solid #009f4d;
+  padding: 1.5rem 5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.btn--success:hover {
+  color: #fff;
+  background-color: #008030;
+  border-color: #00732c;
+}
+
+.input--config {
+  width: 100%;
+  height: 6rem;
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 400;
+  padding: 0 2.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.8rem;
+  line-height: 5rem;
+}
+
+.input--config:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #3f3a64;
+}
+
+.input--light {
+  border: 1px solid #eee;
+}
+
+.input--light:focus {
+  border-color: #3f3a64;
+}
+
+.input--dark {
+  border: 1px solid #3f3a64;
+}
+
+.input--dark:focus {
+  border-color: #eee;
 }
 
 .backToTop i {
