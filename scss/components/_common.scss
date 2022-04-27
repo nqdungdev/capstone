@@ -29,6 +29,16 @@
     transition: all ease 0.3s;
 }
 
+.bg-overlay--day {
+    background-color: $bgOverlay-day;
+    transition: all ease 0.3s;
+}
+
+.bg-overlay--night {
+    background-color: $bgOverlay-night;
+    transition: all ease 0.3s;
+}
+
 //text color
 .text-body {
     @include text($fsBody, $tcPrimary-day, $fwNormal);
@@ -56,6 +66,10 @@
         color: $tcTitle-night !important;
         transition: all ease 0.2s;
     }
+    &--secondary {
+        color: $tcSecondary !important;
+        transition: all ease 0.2s;
+    }
 }
 
 .subTitle {
@@ -76,17 +90,31 @@
 }
 
 //input
-.input--config {
-    @include size(100%, 6rem);
-    @include text($fs5, $tcPrimary-day, $fwNormal);
-    padding: 0 2.5rem;
-    border: 1px solid $tcTitle-night;
-    border-radius: 0.8rem;
-    line-height: 5rem;
-    &:focus {
-        outline: none;
-        box-shadow: none;
-        border-color: $tcTitle-day;
+.input {
+    &--config {
+        @include size(100%, 6rem);
+        @include text($fs5, $tcPrimary-day, $fwNormal);
+        padding: 0 2.5rem;
+        border: 1px solid $tcTitle-night;
+        border-radius: 0.8rem;
+        line-height: 5rem;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $tcTitle-day;
+        }
+    }
+    &--light {
+        border: 1px solid $tcTitle-night;
+        &:focus {
+            border-color: $tcTitle-day;
+        }
+    }
+    &--dark {
+        border: 1px solid $tcTitle-day;
+        &:focus {
+            border-color: $tcTitle-night;
+        }
     }
 }
 
