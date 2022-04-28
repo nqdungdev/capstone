@@ -73,7 +73,7 @@
                         <div class="header__right d-flex align-items-center">
                             <!-- search -->
                             <div class="btn header__search">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" id="js-search"></i>
                             </div>
                             <!-- change theme -->
                             <input type="checkbox" id="js-checkbox" class="d-none">
@@ -82,11 +82,19 @@
                                 <i id="js-sun" class="fa fa-sun" style="display:none"></i>
                             </label>
                         </div>
+                        <!-- search from -->
+                        <div class="header__search__form" style="visibility: hidden;">
+                            <i class="fa fa-times btn--close"></i>
+                            <form>
+                                <input name="search" placeholder="Start Typing" type="text">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- BANNER -->
     <section class="banner">
         <div class="container w-100 h-100 text-center">
@@ -98,6 +106,23 @@
         <div class="banner__overlay">
         </div>
     </section>
+
+    <!-- RIGHT-SIDEBAR -->
+    <div class="right-sidebar">
+        <div class="button-sidebar">
+            <i class="fa fa-angle-double-right"></i>
+        </div>
+        <div class="all-sidebar">
+            <div class="angel">
+            </div>
+            <div class="sidebar">
+                <a href="#"><i class="fa fa-arrow-left"></i>Back</a>
+                <a href="#"><i class="fa fa-download"></i>Download</a>
+                <a href="#"><i class="fa fa-shopping-cart"></i>Buy</a>
+            </div>
+        </div>
+    </div>
+
     <!-- CONTACT-SECTION -->
     <section class="contact-section bg--light">
         <header class="contact-section__title text-center mb-md-5 mb-4">
@@ -179,22 +204,22 @@
                 <form action="#">
                     <div class="row">
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="name" placeholder="Name">
+                            <input class="form-control input--config bg--white" type="text" name="name" placeholder="Name">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="phone" placeholder="Your Phone Number">
+                            <input class="form-control input--config bg--white" type="text" name="phone" placeholder="Your Phone Number">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="email" name="email" placeholder="Email*">
+                            <input class="form-control input--config bg--white" type="email" name="email" placeholder="Email*">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="subject" placeholder="Subject">
+                            <input class="form-control input--config bg--white" type="text" name="subject" placeholder="Subject">
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control bg--white mt-3 mb-5" name="message" placeholder="Message*"></textarea>
+                            <textarea class="form-control input--config bg--white mt-3 mb-5" name="message" placeholder="Message*"></textarea>
                         </div>
                         <div class="col-12 text-center text-lg-end">
-                            <button type="submit" class="btn btn-submit w-sm-100">
+                            <button type="submit" class="btn btn--success btn-submit w-sm-100">
                                 Submit Now</button>
                         </div>
                     </div>
