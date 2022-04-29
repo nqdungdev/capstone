@@ -6,4 +6,227 @@
 @import "./base/rs-bootstrap";
 @import "./components/common";
 @import "./components/header";
+@import "./components/banner";
+@import "./components/right-sidebar";
 @import "./components/footer";
+// ABOUT-COMPANY
+.about-company {
+    padding: 10rem 0;
+    &__img {
+        img {
+            border-radius: 30% 70% 70% 30%/ 30% 30% 70% 70%;
+            box-shadow: 0 1.5rem 3.8rem 0 $bgShadowDark--2;
+            position: relative;
+            z-index: 1;
+        }
+        &__bg {
+            @include size(45rem, 45rem);
+            border-radius: 25% 70% 84% 22% / 42% 75% 25% 75%;
+            background-color: $bgSecondary;
+            opacity: 0.4;
+            box-shadow: 0 1.5rem 3.8rem 0 $bgShadowDark--2;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__box {
+            @include text($fs3, $tcWhite, $fwMedium);
+            @include size(20rem, 20rem);
+            background-color: $bgSecondary;
+            position: absolute;
+            right: 8.5rem;
+            bottom: 1rem;
+            padding: 3.5rem;
+            box-shadow: 3rem 3rem 3rem $bgShadowDark--2;
+            border-radius: 0.8rem;
+            transform: rotate(45deg);
+            z-index: 2;
+            &>div {
+                transform: rotate(-45deg);
+                h1 {
+                    @include text($fs10, $tcWhite, $fwMedium);
+                    line-height: 4rem;
+                    margin-bottom: 1.4rem
+                }
+                p {
+                    @include text($fs8, $tcWhite, $fwMedium);
+                    line-height: 2.8rem;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    &__content {
+        h2 {
+            @include text($fs8, $tcWhite, $fwMedium);
+            margin-bottom: 2.4rem;
+        }
+        button {
+            margin-top: 4rem;
+            margin-right: 2.4rem;
+        }
+        .btn--modal {
+            padding: 0;
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .video-play-icon {
+            i {
+                @include icon($fs8, transparent, $fwBold, transparent, $bgSecondary, 50%, 7rem);
+                border-width: 3px;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: $tcSecondary;
+                line-height: 6.5rem;
+            }
+        }
+        .modal {
+            background: $bgShadowDark--3;
+            .modal-dialog {
+                max-width: 750px;
+                margin: 40px auto;
+                .modal-content {
+                    background: transparent;
+                    border: none;
+                    .modal-header {
+                        border: none;
+                        .btn-close {
+                            @include button(inherit, $tcWhite, $fwMedium, transparent, none, 0.8rem, unset);
+                            background: none;
+                            opacity: 0.8;
+                            i {
+                                font-size: $fs3;
+                            }
+                        }
+                    }
+                    .modal-body {
+                        iframe {
+                            @include size(100%, 42rem);
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__items {
+        padding-top: 10rem;
+    }
+    &__item {
+        padding: 5rem 3rem;
+        border-radius: 0.8rem;
+        i {
+            @include icon(3.4rem, $tcSecondary, $fwMedium, transparent, transparent, unset, 3.5rem);
+            cursor: initial;
+        }
+        h1 {
+            cursor: pointer;
+            transition: all ease 0.2s;
+            font-size: $fs8;
+            margin-bottom: 1.5rem;
+            &:hover {
+                color: $tcSecondary !important;
+                transition: all ease 0.2s;
+            }
+        }
+    }
+    @include responsive($lg) {
+        padding: 7rem 0;
+        &__img {
+            &__bg {
+                @include size(50rem, 50rem);
+            }
+        }
+        &__items {
+            padding-top: 5rem;
+        }
+    }
+    @include responsive($md) {
+        &__content {
+            .video-play-icon {
+                i {
+                    @include size(5.5rem, 5.5rem);
+                    font-size: $fs3;
+                    line-height: 5rem;
+                }
+            }
+        }
+    }
+    @include responsive($sm) {
+        &__img {
+            &__bg {
+                @include size(100%, 100%);
+            }
+            &__box {
+                @include size(15rem, 15rem);
+                &>div {
+                    transform: rotate(-45deg);
+                    h1 {
+                        font-size: 3.5rem;
+                        line-height: 4rem;
+                        margin-bottom: 1rem
+                    }
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ABOUT-STATS
+.about-stats {
+    padding: 10rem 0;
+    &__items {
+        margin-top: 5rem;
+    }
+    &__item {
+        span {
+            @include text($fsTitle, $tcSecondary, $fwNormal);
+            display: block;
+        }
+        h1 {
+            font-size: $fs8;
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__img {
+        img {
+            border-radius: 0.8rem;
+        }
+    }
+    @include responsive($lg) {
+        padding: 7rem 0;
+        &__items {
+            margin-top: 2.4rem;
+        }
+        &__img {
+            margin-top: 5rem;
+        }
+    }
+}
+
+// ABOUT-COVER
+.about-cover {
+    background: url(../img/bg1.jpg) center center / cover no-repeat;
+    background-attachment: fixed;
+    z-index: 20;
+    .btn--modal {
+        margin-top: 2.4rem;
+        transform: scale(1);
+        transition: all ease 0.3s;
+        .video-play-icon {
+            i {
+                -webkit-text-stroke-color: $tcWhite;
+                border-color: $bgWhite;
+            }
+        }
+        &:hover {
+            transform: scale(1.2);
+            transition: all ease 0.3s;
+        }
+    }
+}

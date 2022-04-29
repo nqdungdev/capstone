@@ -66,3 +66,60 @@
         background-image: none;
     }
 }
+
+// ABOUT-PAGE
+// modal
+.btn--modal {
+    padding: 0;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    .video-play-icon {
+        i {
+            @include icon($fs8, transparent, $fwBold, transparent, $bgSecondary, 50%, 7rem);
+            border-width: 3px;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: $tcSecondary;
+            line-height: 6.5rem;
+        }
+    }
+    @include responsive($md) {
+        .video-play-icon {
+            i {
+                @include size(5.5rem, 5.5rem);
+                font-size: $fs3;
+                line-height: 5rem;
+            }
+        }
+    }
+}
+
+.modal {
+    background: $bgShadowDark--3;
+    .modal-dialog {
+        max-width: 750px;
+        margin: 40px auto;
+        .modal-content {
+            background: transparent;
+            border: none;
+            .modal-header {
+                border: none;
+                .btn-close {
+                    @include button(inherit, $tcWhite, $fwMedium, transparent, none, 0.8rem, unset);
+                    background: none;
+                    opacity: 0.8;
+                    i {
+                        font-size: $fs3;
+                    }
+                }
+            }
+            .modal-body {
+                iframe {
+                    @include size(100%, 42rem);
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}

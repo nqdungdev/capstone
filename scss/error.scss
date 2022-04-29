@@ -34,6 +34,18 @@
         position: relative;
         margin-top: 2.4rem;
         input {
+            &::-webkit-input-placeholder {
+                font-style: italic;
+            }
+            &::-moz-placeholder {
+                font-style: italic;
+            }
+            &:-ms-input-placeholder {
+                font-style: italic;
+            }
+            &::-ms-input-placeholder {
+                font-style: italic;
+            }
             &::placeholder {
                 font-style: italic;
             }
