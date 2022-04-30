@@ -52,6 +52,7 @@ const changeTheme = () => {
     if (checkBox.checked) {
         document.getElementById('js-moon').style.display = "none"
         document.getElementById('js-sun').style.display = "block"
+        document.getElementById('js-map').style.filter = "grayscale(100%)"
         changeBg("bg--white", "bg--dark")
         changeBg("bg--day", "bg--night")
         changeBg("bg--light", "bg--dark-1")
@@ -59,9 +60,11 @@ const changeTheme = () => {
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
         changeInput("input--light", "input--dark")
+        changeText("icon-alt--day", "icon-alt--night")
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
+        document.getElementById('js-map').style.filter = "grayscale(0%)"
         changeBg("bg--dark", "bg--white")
         changeBg("bg--night", "bg--day")
         changeBg("bg--dark-1", "bg--light")
@@ -69,6 +72,7 @@ const changeTheme = () => {
         changeText("title--night", "title--day")
         changeText("text-body--night", "text-body--day")
         changeInput("input--dark", "input--light")
+        changeText("icon-alt--night", "icon-alt--day")
     }
 }
 

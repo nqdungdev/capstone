@@ -95,6 +95,9 @@
         background-color: $bgGreen-700;
         border-color: $bgGreen-800;
     }
+    @include responsive($sm) {
+        padding: 1.2rem 3rem;
+    }
 }
 
 //input
@@ -126,6 +129,20 @@
     }
 }
 
+//icon
+.icon-alt {
+    &--day {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $tcTitle-day;
+        color: $bgWhite;
+    }
+    &--night {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $tcTitle-night;
+        color: $bgDark;
+    }
+}
+
 .backToTop {
     i {
         position: fixed;
@@ -141,5 +158,15 @@
         // text-align: center;
         // border-radius: 50%;
         z-index: 10;
+    }
+}
+
+.main {
+    padding: 9.6rem 0;
+    @include responsive($lg) {
+        padding: 7.2rem 0;
+    }
+    @include responsive($md) {
+        padding: 5.6rem 0;
     }
 }

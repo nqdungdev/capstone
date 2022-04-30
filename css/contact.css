@@ -345,6 +345,12 @@ a {
   border-color: #00732c;
 }
 
+@media screen and (max-width: 576px) {
+  .btn--success {
+    padding: 1.2rem 3rem;
+  }
+}
+
 .input--config {
   width: 100%;
   height: 6rem;
@@ -380,6 +386,18 @@ a {
   border-color: #eee;
 }
 
+.icon-alt--day {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #3f3a64;
+  color: #fff;
+}
+
+.icon-alt--night {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #eee;
+  color: #151421;
+}
+
 .backToTop i {
   position: fixed;
   font-size: 1.5rem;
@@ -398,6 +416,22 @@ a {
   right: 2rem;
   bottom: 2rem;
   z-index: 10;
+}
+
+.main {
+  padding: 9.6rem 0;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 7.2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 5.6rem 0;
+  }
 }
 
 .header {
@@ -857,6 +891,14 @@ a {
   padding: 5rem 0;
 }
 
+.contact-section__title {
+  margin: 4.8rem 0;
+}
+
+.contact-section__title h1 {
+  margin-bottom: 0;
+}
+
 .contact-section__item {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.05);
@@ -892,6 +934,21 @@ a {
 
 .contact-section__item__text a:hover {
   color: #3f3a64;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-section__title {
+    margin: 0 0 4.8rem;
+  }
+  .contact-section__item__icon i {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact-section__title {
+    margin: 0 0 2.4rem;
+  }
 }
 
 .contact-map__content {

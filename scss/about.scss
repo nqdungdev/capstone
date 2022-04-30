@@ -11,7 +11,6 @@
 @import "./components/footer";
 // ABOUT-COMPANY
 .about-company {
-    padding: 10rem 0;
     &__img {
         img {
             border-radius: 30% 70% 70% 30%/ 30% 30% 70% 70%;
@@ -72,46 +71,9 @@
                 box-shadow: none;
             }
         }
-        .video-play-icon {
-            i {
-                @include icon($fs8, transparent, $fwBold, transparent, $bgSecondary, 50%, 7rem);
-                border-width: 3px;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: $tcSecondary;
-                line-height: 6.5rem;
-            }
-        }
-        .modal {
-            background: $bgShadowDark--3;
-            .modal-dialog {
-                max-width: 750px;
-                margin: 40px auto;
-                .modal-content {
-                    background: transparent;
-                    border: none;
-                    .modal-header {
-                        border: none;
-                        .btn-close {
-                            @include button(inherit, $tcWhite, $fwMedium, transparent, none, 0.8rem, unset);
-                            background: none;
-                            opacity: 0.8;
-                            i {
-                                font-size: $fs3;
-                            }
-                        }
-                    }
-                    .modal-body {
-                        iframe {
-                            @include size(100%, 42rem);
-                            border-radius: 1rem;
-                        }
-                    }
-                }
-            }
-        }
     }
     &__items {
-        padding-top: 10rem;
+        padding-top: 9.6rem;
     }
     &__item {
         padding: 5rem 3rem;
@@ -132,7 +94,6 @@
         }
     }
     @include responsive($lg) {
-        padding: 7rem 0;
         &__img {
             &__bg {
                 @include size(50rem, 50rem);
@@ -140,17 +101,6 @@
         }
         &__items {
             padding-top: 5rem;
-        }
-    }
-    @include responsive($md) {
-        &__content {
-            .video-play-icon {
-                i {
-                    @include size(5.5rem, 5.5rem);
-                    font-size: $fs3;
-                    line-height: 5rem;
-                }
-            }
         }
     }
     @include responsive($sm) {
@@ -179,7 +129,6 @@
 
 // ABOUT-STATS
 .about-stats {
-    padding: 10rem 0;
     &__items {
         margin-top: 5rem;
     }
@@ -199,7 +148,6 @@
         }
     }
     @include responsive($lg) {
-        padding: 7rem 0;
         &__items {
             margin-top: 2.4rem;
         }
@@ -227,6 +175,178 @@
         &:hover {
             transform: scale(1.2);
             transition: all ease 0.3s;
+        }
+    }
+}
+
+// ABOUT-TEAM
+.about-team {
+    &__item {
+        &__img {
+            position: relative;
+            overflow: hidden;
+            img {
+                border-radius: 0.8rem;
+                width: 100%;
+            }
+            &:hover {
+                .about-team__item__overlay {
+                    opacity: 1;
+                    transition: all .2s ease-in-out;
+                }
+                .about-team__item__details {
+                    opacity: 1;
+                    // top: 15%;
+                    margin-top: -10rem
+                }
+            }
+        }
+        &__overlay {
+            @include size(100%, 100%);
+            background-color: $bgShadowDark--4;
+            border-radius: 0.8rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+        &__details {
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            padding: 10%;
+            z-index: 20;
+            transition: all .2s ease-in-out;
+            p {
+                @include text($fs7, $tcWhite, $fwMedium);
+            }
+        }
+        &__socials {
+            margin-top: 2.4rem;
+            a {
+                i {
+                    @include icon($fs1, $tcWhite, $fwBold, transparent, transparent, 50%, 3.7rem);
+                }
+                &:hover {
+                    i {
+                        background-color: $bgShadowLight;
+                    }
+                }
+            }
+        }
+        &__info {
+            h1 {
+                margin: 2.5rem 0 0.5rem;
+                cursor: pointer;
+                transition: all ease 0.2s;
+                font-size: $fs7;
+                &:hover {
+                    color: $tcSecondary !important;
+                    transition: all ease 0.2s;
+                }
+            }
+            p {
+                line-height: 2.7rem;
+            }
+        }
+    }
+}
+
+// ABOUT-FEATURES
+.about-features {
+    &__title {
+        max-width: 80rem;
+        margin: auto;
+    }
+    &__items {
+        padding-top: 9.6rem;
+    }
+    &__item {
+        margin-bottom: 4.8rem;
+        i {
+            @include icon($fs11, inherit, $fwBold, transparent, inherit, 0.8rem, 8rem);
+            margin-top: 4px;
+        }
+        .icon {
+            &--success {
+                color: $tcSecondary;
+                i {
+                    border: 1px solid $bgSecondary;
+                }
+            }
+            &--info {
+                color: $tcBlue;
+                i {
+                    border: 1px solid $bgBlue;
+                }
+            }
+            &--danger {
+                color: $tcRed;
+                i {
+                    border: 1px solid $bgRed;
+                }
+            }
+            &--warning {
+                color: $tcOrange;
+                i {
+                    border: 1px solid $bgOrange;
+                }
+            }
+        }
+        h1 {
+            margin-bottom: 1.2rem;
+            cursor: pointer;
+            transition: all ease 0.2s;
+            font-size: $fs12;
+            &:hover {
+                color: $tcSecondary !important;
+                transition: all ease 0.2s;
+            }
+        }
+    }
+    @include responsive($lg) {
+        &__items {
+            padding-top: 2.4rem;
+        }
+    }
+    @include responsive($md) {
+        &__item {
+            i {
+                font-size: $fs13;
+            }
+            h1 {
+                font-size: $fs8;
+            }
+        }
+    }
+    @include responsive($sm) {
+        &__item {
+            i {
+                font-size: $fs8;
+                width: 6.2rem;
+                height: 6.2rem;
+                line-height: 6.2rem;
+            }
+            h1 {
+                font-size: $fs7;
+            }
+        }
+    }
+}
+
+// ABOUT-PROJECT
+.about-project {
+    @include responsive($lg) {
+        &__btn {
+            margin-top: 4.8rem;
+        }
+    }
+    @include responsive($md) {
+        &__btn {
+            margin-top: 2.4rem;
         }
     }
 }

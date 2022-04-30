@@ -345,6 +345,12 @@ a {
   border-color: #00732c;
 }
 
+@media screen and (max-width: 576px) {
+  .btn--success {
+    padding: 1.2rem 3rem;
+  }
+}
+
 .input--config {
   width: 100%;
   height: 6rem;
@@ -380,6 +386,18 @@ a {
   border-color: #eee;
 }
 
+.icon-alt--day {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #3f3a64;
+  color: #fff;
+}
+
+.icon-alt--night {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #eee;
+  color: #151421;
+}
+
 .backToTop i {
   position: fixed;
   font-size: 1.5rem;
@@ -398,6 +416,22 @@ a {
   right: 2rem;
   bottom: 2rem;
   z-index: 10;
+}
+
+.main {
+  padding: 9.6rem 0;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 7.2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 5.6rem 0;
+  }
 }
 
 .header {
