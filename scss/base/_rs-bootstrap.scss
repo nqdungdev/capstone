@@ -11,9 +11,9 @@
         &:hover {
             opacity: 1;
         }
-        &.active {
-            color: $tcSecondary !important;
-        }
+        // &.active {
+        // color: $tcSecondary !important;
+        // }
     }
     .dropdown-toggle::after {
         content: "\f107";
