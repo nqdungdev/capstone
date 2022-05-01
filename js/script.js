@@ -25,7 +25,7 @@ const changeInput = (prevClass, nextClass) => {
 
 let headerBg = this.document.getElementById('header');
 let headerTitles = this.document.getElementsByClassName('header__title');
-let active = this.document.querySelector('.nav-link.active');
+let actives = this.document.querySelectorAll('.nav-link.active');
 
 const checkScroll = () => {
     if(document.documentElement.scrollTop < 50) {
@@ -33,7 +33,10 @@ const checkScroll = () => {
         headerBg.style.height = "10rem";
         headerBg.classList.remove('bg--white');
         headerBg.classList.remove('bg--dark');
-        active.setAttribute('style', 'color:inherit !important');
+        // active.setAttribute('style', 'color:inherit !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:inherit !important');
+        }
         for (let headerTitle of headerTitles) {
             headerTitle.classList.remove('title--day')
             headerTitle.classList.add('title--night')
@@ -90,7 +93,10 @@ const scrollPage = () =>{
     if (document.documentElement.scrollTop >= 50) {
         headerBg.style.borderBottom = "none"
         headerBg.style.height = "8rem";
-        active.setAttribute('style', 'color:#009f4d !important');
+        // active.setAttribute('style', 'color:#009f4d !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:#009f4d !important');
+        }
         if (checkBox.checked) {
             headerBg.classList.add('bg--dark');
             for (let headerTitle of headerTitles) {
