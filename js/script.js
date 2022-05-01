@@ -207,6 +207,5 @@ buttonSideBar.addEventListener('click', function(){
     allSideBar.classList.toggle('animate-sidebar');
 })
 
-//services
 
 
