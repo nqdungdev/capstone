@@ -169,6 +169,9 @@
   }
   
   .media-object, .nesting{
+      .title{
+        font-size: $fs8TitleElemnt;
+      }
       h1{
         @include text($fs7, $tcTitle-day, $fwSemiBold);
         margin: .5rem 0;
@@ -183,7 +186,7 @@
   border-radius: 0.8rem;
 }
 .font-text {
-  font-size: 1.6rem;
+  font-size: $fs3;
 }
 .title-distance {
   margin-top: 3rem;
