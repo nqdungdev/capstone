@@ -11,7 +11,6 @@
 @import "./components/footer";
 // ERROR-CONTENT
 .error-content {
-    padding: 10rem 0;
     &__info {
         max-width: 850px;
         margin: auto;
@@ -34,6 +33,18 @@
         position: relative;
         margin-top: 2.4rem;
         input {
+            &::-webkit-input-placeholder {
+                font-style: italic;
+            }
+            &::-moz-placeholder {
+                font-style: italic;
+            }
+            &:-ms-input-placeholder {
+                font-style: italic;
+            }
+            &::-ms-input-placeholder {
+                font-style: italic;
+            }
             &::placeholder {
                 font-style: italic;
             }
@@ -60,9 +71,6 @@
             outline: 0;
             box-shadow: 0 0 0 0.3rem $bgShadowGreen;
         }
-    }
-    @include responsive($lg) {
-        padding: 7rem 0;
     }
     @include responsive($md) {
         &__bigTitle {
