@@ -95,6 +95,15 @@
     letter-spacing: 1px;
 }
 
+.text-hover--success {
+    cursor: pointer;
+    transition: all ease 0.3s;
+    &:hover {
+        color: $tcSecondary !important;
+        transition: all ease 0.3s;
+    }
+}
+
 //button green
 .btn--success {
     @include button($fs3, $tcWhite, $fwSemiBold, $bgSecondary, $bgSecondary, 1.5rem 5rem, 0.8rem);
