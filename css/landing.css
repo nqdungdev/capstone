@@ -126,6 +126,12 @@ a {
   background-image: none;
 }
 
+@media screen and (max-width: 992px) {
+  .header .navbar-nav {
+    padding-top: 2rem;
+  }
+}
+
 .bg--day {
   background-color: #f7f7f7;
   -webkit-transition: all ease 0.3s;
@@ -318,7 +324,7 @@ a {
 }
 
 .header__logo h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: inherit;
   font-weight: 600;
 }
@@ -472,6 +478,12 @@ a {
   transition: all ease 0.4s;
 }
 
+@media screen and (max-width: 1200px) {
+  .header h1 {
+    font-size: 3.2rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .header {
     height: -webkit-max-content !important;
@@ -482,6 +494,12 @@ a {
     position: absolute;
     top: 1rem;
     right: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header h1 {
+    font-size: 2.6rem;
   }
 }
 

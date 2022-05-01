@@ -65,4 +65,9 @@
     .navbar-toggler-icon {
         background-image: none;
     }
+    @include responsive($lg) {
+        .navbar-nav {
+            padding-top: 2rem;
+        }
+    }
 }
