@@ -22,7 +22,7 @@
     }
     &__overlay {
         @include size(100%, 100%);
-        // background: rgba(29, 42, 55, 0.7);
+        background: rgba(29, 42, 55, 0.7);
         position: absolute;
         left: 0;
         top: 0;

@@ -258,6 +258,8 @@ a {
 
 .bg-servicepage-change {
   background-color: rgba(29, 42, 55, 0.8);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .bg-overlay--day {
