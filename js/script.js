@@ -61,6 +61,7 @@ const changeTheme = () => {
         changeBg("bg-overlay--day", "bg-overlay--night")
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
+        changeBg('bg-servicepage', 'bg-servicepage-change');
         changeInput("input--light", "input--dark")
     } else {
         document.getElementById('js-moon').style.display = "block"
@@ -71,6 +72,7 @@ const changeTheme = () => {
         changeBg("bg-overlay--night", "bg-overlay--day")
         changeText("title--night", "title--day")
         changeText("text-body--night", "text-body--day")
+        changeBg('bg-servicepage-change', 'bg-servicepage');
         changeInput("input--dark", "input--light")
     }
 }
@@ -199,3 +201,7 @@ buttonSideBar.addEventListener('click', function(){
     buttonSideBar.classList.toggle('animate-button');
     allSideBar.classList.toggle('animate-sidebar');
 })
+
+//services
+
+

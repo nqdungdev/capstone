@@ -168,6 +168,7 @@ a {
   transition: all ease 0.3s;
 }
 
+
 .bg-overlay--day {
   background-color: rgba(29, 42, 55, 0.7);
   -webkit-transition: all ease 0.3s;
@@ -308,6 +309,24 @@ a {
   right: 2rem;
   bottom: 2rem;
   z-index: 10;
+}
+
+.button-style {
+  padding: 1.5rem 5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  border: none;
+  background: #00a63f;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button-style:hover {
+  background-color: #008030;
+  border-color: #00732c;
 }
 
 .header {
