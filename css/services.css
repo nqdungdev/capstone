@@ -132,6 +132,88 @@ a {
   }
 }
 
+.btn--modal {
+  padding: 0;
+}
+
+.btn--modal:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn--modal .video-play-icon i {
+  font-size: 2.2rem;
+  color: transparent;
+  font-weight: 700;
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #009f4d;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  border-width: 3px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #009f4d;
+  line-height: 6.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .btn--modal .video-play-icon i {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 1.6rem;
+    line-height: 5rem;
+  }
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.modal .modal-dialog {
+  max-width: 750px;
+  margin: 40px auto;
+}
+
+.modal .modal-dialog .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  border: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header .btn-close {
+  font-size: inherit;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid none;
+  padding: 0.8rem;
+  border-radius: unset;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  background: none;
+  opacity: 0.8;
+}
+
+.modal .modal-dialog .modal-content .modal-header .btn-close i {
+  font-size: 1.6rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body iframe {
+  width: 100%;
+  height: 42rem;
+  border-radius: 1rem;
+}
+
 .bg--day {
   background-color: #f7f7f7;
   -webkit-transition: all ease 0.3s;
@@ -166,6 +248,16 @@ a {
   background-color: #100f19;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.bg-servicepage {
+  background-color: rgba(29, 42, 55, 0.7);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.bg-servicepage-change {
+  background-color: rgba(29, 42, 55, 0.8);
 }
 
 .bg-overlay--day {
@@ -205,7 +297,7 @@ a {
   color: #3f3a64;
   font-weight: 700;
   line-height: 4.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.4rem;
 }
 
 .title--day {
@@ -226,12 +318,26 @@ a {
   transition: all ease 0.2s;
 }
 
+@media screen and (max-width: 992px) {
+  .title {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+}
+
 .subTitle {
   font-size: 1.4rem;
   color: #7e7d7d;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn--success {
@@ -253,6 +359,12 @@ a {
   color: #fff;
   background-color: #008030;
   border-color: #00732c;
+}
+
+@media screen and (max-width: 576px) {
+  .btn--success {
+    padding: 1.2rem 3rem;
+  }
 }
 
 .input--config {
@@ -290,6 +402,18 @@ a {
   border-color: #eee;
 }
 
+.icon-alt--day {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #3f3a64;
+  color: #fff;
+}
+
+.icon-alt--night {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #eee;
+  color: #151421;
+}
+
 .backToTop i {
   position: fixed;
   font-size: 1.5rem;
@@ -308,6 +432,22 @@ a {
   right: 2rem;
   bottom: 2rem;
   z-index: 10;
+}
+
+.main {
+  padding: 9.6rem 0;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 7.2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 5.6rem 0;
+  }
 }
 
 .button-style {
@@ -730,12 +870,11 @@ a {
 
 .banner {
   background: url(../img/b1.jpg) top center/cover no-repeat;
-  padding: 5rem 0;
+  padding: 10rem 0;
   position: relative;
 }
 
 .banner .container {
-  padding: 5rem 0;
   position: relative;
   z-index: 10;
 }
@@ -745,7 +884,7 @@ a {
 }
 
 .banner__content h1 {
-  font-size: 5.5rem;
+  font-size: 5rem;
   color: #fff;
   font-weight: 600;
   text-transform: capitalize;
@@ -762,10 +901,36 @@ a {
 .banner__overlay {
   width: 100%;
   height: 100%;
-  background: rgba(29, 42, 55, 0.7);
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    padding: 7rem 0;
+  }
+  .banner__content h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 5rem 0;
+  }
+  .banner__content {
+    padding-top: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner__content h1 {
+    font-size: 3.5rem;
+  }
+  .banner__content p {
+    font-size: 1.8rem;
+  }
 }
 
 .introduction {

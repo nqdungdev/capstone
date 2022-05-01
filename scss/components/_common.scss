@@ -29,14 +29,15 @@
     transition: all ease 0.3s;
 }
 
-.bg-servicepage{
+.bg-servicepage {
     background-color: rgba(29, 42, 55, 0.7);
     transition: all ease 0.3s;
 }
 
-.bg-servicepage-change{
+.bg-servicepage-change {
     background-color: rgba(29, 42, 55, 0.8);
-  
+}
+
 .bg-overlay--day {
     background-color: $bgOverlay-day;
     transition: all ease 0.3s;
@@ -65,7 +66,7 @@
 .title {
     @include text($fsTitle, $tcTitle-day, $fwBold);
     line-height: 4.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.4rem;
     &--day {
         color: $tcTitle-day !important;
         transition: all ease 0.2s;
@@ -78,12 +79,20 @@
         color: $tcSecondary !important;
         transition: all ease 0.2s;
     }
+    @include responsive($lg) {
+        font-size: $fs9;
+    }
+    @include responsive($sm) {
+        font-size: $fs11;
+        line-height: 3.2rem;
+    }
 }
 
 .subTitle {
     @include text($fsSubTitle, $tcSubTitle, $fwSemiBold);
     line-height: 3rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 //button green
@@ -94,6 +103,9 @@
         color: $tcWhite;
         background-color: $bgGreen-700;
         border-color: $bgGreen-800;
+    }
+    @include responsive($sm) {
+        padding: 1.2rem 3rem;
     }
 }
 
@@ -126,6 +138,20 @@
     }
 }
 
+//icon
+.icon-alt {
+    &--day {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $tcTitle-day;
+        color: $bgWhite;
+    }
+    &--night {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $tcTitle-night;
+        color: $bgDark;
+    }
+}
+
 .backToTop {
     i {
         position: fixed;
@@ -144,7 +170,17 @@
     }
 }
 
-.button-style{
+.main {
+    padding: 9.6rem 0;
+    @include responsive($lg) {
+        padding: 7.2rem 0;
+    }
+    @include responsive($md) {
+        padding: 5.6rem 0;
+    }
+}
+
+.button-style {
     padding: 1.5rem 5rem;
     font-size: $fs3;
     line-height: 1.8rem;
@@ -154,7 +190,7 @@
     background: $bgGreen-500;
     color: $tcWhite;
     transition: all 0.5s;
-    &:hover{
+    &:hover {
         background-color: $bgGreen-700;
         border-color: $bgGreen-800;
     }
