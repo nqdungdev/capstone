@@ -9,7 +9,7 @@
     z-index: 100;
     &__logo {
         h1 {
-            @include text($fs9, inherit, $fwSemiBold);
+            @include text($fsFooterLogo, inherit, $fwSemiBold);
         }
         span {
             @include text($fs1, inherit, $fwSemiBold);
@@ -92,6 +92,11 @@
             @include icon($fs3, inherit, $fwBold, transparent, transparent, 50%, 4rem);
         }
     }
+    @include responsive($xl) {
+        h1 {
+            font-size: $fs9;
+        }
+    }
     @include responsive($lg) {
         height: -webkit-max-content !important;
         height: -moz-max-content !important;
@@ -100,6 +105,11 @@
             position: absolute;
             top: 1rem;
             right: 4.5rem;
+        }
+    }
+    @include responsive($sm) {
+        h1 {
+            font-size: 2.6rem;
         }
     }
 }

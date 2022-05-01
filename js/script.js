@@ -1,81 +1,167 @@
-var checkBox = document.getElementById('js-checkbox')
-checkBox.addEventListener('click', function () {
+let checkBox = document.getElementById('js-checkbox')
+
+const changeBg = (prevClass, nextClass) => {
+    let bgColors = document.querySelectorAll(`.${prevClass}`)
+    for (let bgColor of bgColors) {
+        bgColor.classList.remove(`${prevClass}`)
+        bgColor.classList.add(`${nextClass}`)
+    }
+}
+const changeText = (prevClass, nextClass) => {
+    let colors = document.querySelectorAll(`.${prevClass}`)
+    for (let color of colors) {
+        color.classList.remove(`${prevClass}`)
+        color.classList.add(`${nextClass}`)
+    }
+}
+
+const changeInput = (prevClass, nextClass) => {
+    let bgColors = document.querySelectorAll(`.${prevClass}`)
+    for (let bgColor of bgColors) {
+        bgColor.classList.remove(`${prevClass}`)
+        bgColor.classList.add(`${nextClass}`)
+    }
+}
+
+let headerBg = this.document.getElementById('header');
+let headerTitles = this.document.getElementsByClassName('header__title');
+let actives = this.document.querySelectorAll('.nav-link.active');
+
+const checkScroll = () => {
+    if(document.documentElement.scrollTop < 50) {
+        headerBg.style.borderBottom = "1px solid rgba(231, 231, 231, 0.18)";
+        headerBg.style.height = "10rem";
+        headerBg.classList.remove('bg--white');
+        headerBg.classList.remove('bg--dark');
+        // active.setAttribute('style', 'color:inherit !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:inherit !important');
+        }
+        for (let headerTitle of headerTitles) {
+            headerTitle.classList.remove('title--day')
+            headerTitle.classList.add('title--night')
+        }
+        checkBox.addEventListener('click',function(){
+        for (let headerTitle of headerTitles) {
+            headerTitle.classList.remove('title--day')
+            headerTitle.classList.add('title--night')
+        }
+        }) 
+    }
+}
+
+const changeTheme = () => {
+    checkScroll()
     if (checkBox.checked) {
         document.getElementById('js-moon').style.display = "none"
         document.getElementById('js-sun').style.display = "block"
         changeBg("bg--white", "bg--dark")
         changeBg("bg--day", "bg--night")
         changeBg("bg--light", "bg--dark-1")
+        changeBg("bg-overlay--day", "bg-overlay--night")
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
         changeBg('bg-servicepage', 'bg-servicepage-change');
+        changeInput("input--light", "input--dark")
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
         changeBg("bg--dark", "bg--white")
         changeBg("bg--night", "bg--day")
         changeBg("bg--dark-1", "bg--light")
+        changeBg("bg-overlay--night", "bg-overlay--day")
         changeText("title--night", "title--day")
         changeText("text-body--night", "text-body--day")
         changeBg('bg-servicepage-change', 'bg-servicepage');
-    }
-});
-
-const changeBg = (prevClass, nextClass) => {
-    var bgColors = document.querySelectorAll(`.${prevClass}`)
-    for (var bgColor of bgColors) {
-        bgColor.classList.remove(`${prevClass}`)
-        bgColor.classList.add(`${nextClass}`)
-    }
-}
-const changeText = (prevClass, nextClass) => {
-    var colors = document.querySelectorAll(`.${prevClass}`)
-    for (var color of colors) {
-        color.classList.remove(`${prevClass}`)
-        color.classList.add(`${nextClass}`)
+        changeInput("input--dark", "input--light")
     }
 }
 
-window.addEventListener("scroll", function () {
-    var headerBg = this.document.getElementById('header');
-    var headerTitles = this.document.getElementsByClassName('header__title');
+const saveData=()=>{
+    localStorage.setItem("checked",JSON.stringify(checkBox.checked))
+}
+const getData=()=>{
+    if(localStorage.getItem("checked")){
+        checkBox.checked =JSON.parse(localStorage.getItem("checked"))
+        changeTheme()
+    }
+}
+getData()
+
+const scrollPage = () =>{
+    checkScroll()
+    window.addEventListener("scroll", () => {
+    checkScroll()
     if (document.documentElement.scrollTop >= 50) {
+        headerBg.style.borderBottom = "none"
         headerBg.style.height = "8rem";
+        // active.setAttribute('style', 'color:#009f4d !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:#009f4d !important');
+        }
         if (checkBox.checked) {
             headerBg.classList.add('bg--dark');
-            for (var headerTitle of headerTitles) {
+            for (let headerTitle of headerTitles) {
                 headerTitle.classList.remove('title--day')
                 headerTitle.classList.add('title--night')
             }
         } else {
             headerBg.classList.add('bg--white');
-            for (var headerTitle of headerTitles) {
+            for (let headerTitle of headerTitles) {
                 headerTitle.classList.remove('title--night')
                 headerTitle.classList.add('title--day')
             }
         }
+    } 
+    // else {
+    //     headerBg.style.height = "10rem";
+    //     headerBg.classList.remove('bg--white');
+    //     headerBg.classList.remove('bg--dark');
+    //     active.setAttribute('style', 'color:inherit !important');
+    //     for (let headerTitle of headerTitles) {
+    //         headerTitle.classList.remove('title--day')
+    //         headerTitle.classList.add('title--night')
+    //     }
+    //     checkBox.addEventListener('click',function(){
+    //     for (let headerTitle of headerTitles) {
+    //         headerTitle.classList.remove('title--day')
+    //         headerTitle.classList.add('title--night')
+    //     }
+    //     }) 
+    // }
+});
+}
+scrollPage()
 
-    } else {
-        headerBg.style.height = "10rem";
-        headerBg.classList.remove('bg--white');
-        headerBg.classList.remove('bg--dark');
-        for (var headerTitle of headerTitles) {
-            headerTitle.classList.remove('title--day')
-            headerTitle.classList.add('title--night')
-        }
-        checkBox.addEventListener('click',function(){
-        for (var headerTitle of headerTitles) {
-            headerTitle.classList.remove('title--day')
-            headerTitle.classList.add('title--night')
-        }
-        }) 
-    }
+checkBox.addEventListener('click', () => {
+    checkScroll()
+    changeTheme()
+    saveData()
+    // if (checkBox.checked) {
+    //     document.getElementById('js-moon').style.display = "none"
+    //     document.getElementById('js-sun').style.display = "block"
+    //     changeBg("bg--white", "bg--dark")
+    //     changeBg("bg--day", "bg--night")
+    //     changeBg("bg--light", "bg--dark-1")
+    //     changeBg("bg-overlay--day", "bg-overlay--night")
+    //     changeText("title--day", "title--night")
+    //     changeText("text-body--day", "text-body--night")
+    // } else {
+    //     document.getElementById('js-moon').style.display = "block"
+    //     document.getElementById('js-sun').style.display = "none"
+    //     changeBg("bg--dark", "bg--white")
+    //     changeBg("bg--night", "bg--day")
+    //     changeBg("bg--dark-1", "bg--light")
+    //     changeBg("bg-overlay--night", "bg-overlay--day")
+    //     changeText("title--night", "title--day")
+    //     changeText("text-body--night", "text-body--day")
+    // }
 });
 
 //handle search button
-var btnSearch = document.getElementById('js-search')
-var btnClose = document.querySelector('.btn--close')
-var searchForm = document.querySelector('.header__search__form')
+let btnSearch = document.getElementById('js-search')
+let btnClose = document.querySelector('.btn--close')
+let searchForm = document.querySelector('.header__search__form')
 btnSearch.addEventListener('click',function(){
     searchForm.style.visibility="initial"
     searchForm.style.opacity="1"

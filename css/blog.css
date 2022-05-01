@@ -52,10 +52,6 @@ a {
   opacity: 1;
 }
 
-.header .nav-link.active {
-  color: #009f4d !important;
-}
-
 .header .dropdown-toggle::after {
   content: "\f107";
   font-family: FontAwesome;
@@ -130,6 +126,12 @@ a {
   background-image: none;
 }
 
+@media screen and (max-width: 992px) {
+  .header .navbar-nav {
+    padding-top: 2rem;
+  }
+}
+
 .bg--day {
   background-color: #f7f7f7;
   -webkit-transition: all ease 0.3s;
@@ -166,13 +168,14 @@ a {
   transition: all ease 0.3s;
 }
 
-.bg-servicepage {
+
+.bg-overlay--day {
   background-color: rgba(29, 42, 55, 0.7);
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
 
-.bg-servicepage-change {
+.bg-overlay--night {
   background-color: rgba(29, 42, 55, 0.8);
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
@@ -218,12 +221,74 @@ a {
   transition: all ease 0.2s;
 }
 
+.title--secondary {
+  color: #009f4d !important;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
 .subTitle {
   font-size: 1.4rem;
   color: #7e7d7d;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
+}
+
+.btn--success {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  background-color: #009f4d;
+  border: 1px solid #009f4d;
+  padding: 1.5rem 5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.btn--success:hover {
+  color: #fff;
+  background-color: #008030;
+  border-color: #00732c;
+}
+
+.input--config {
+  width: 100%;
+  height: 6rem;
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 400;
+  padding: 0 2.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.8rem;
+  line-height: 5rem;
+}
+
+.input--config:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #3f3a64;
+}
+
+.input--light {
+  border: 1px solid #eee;
+}
+
+.input--light:focus {
+  border-color: #3f3a64;
+}
+
+.input--dark {
+  border: 1px solid #3f3a64;
+}
+
+.input--dark:focus {
+  border-color: #eee;
 }
 
 .backToTop i {
@@ -278,7 +343,7 @@ a {
 }
 
 .header__logo h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: inherit;
   font-weight: 600;
 }
@@ -432,6 +497,12 @@ a {
   transition: all ease 0.4s;
 }
 
+@media screen and (max-width: 1200px) {
+  .header h1 {
+    font-size: 3.2rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .header {
     height: -webkit-max-content !important;
@@ -443,6 +514,142 @@ a {
     top: 1rem;
     right: 4.5rem;
   }
+}
+
+@media screen and (max-width: 576px) {
+  .header h1 {
+    font-size: 2.6rem;
+  }
+}
+
+.banner {
+  background: url(../img/b1.jpg) top center/cover no-repeat;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.banner .container {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.banner__content {
+  padding-top: 5rem;
+}
+
+.banner__content h1 {
+  font-size: 5.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 5rem;
+}
+
+.banner__content p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.banner__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.right-sidebar {
+  position: fixed;
+  right: 0;
+  top: 18%;
+  z-index: 100;
+}
+
+.right-sidebar .all-sidebar {
+  padding: 0 1.2rem;
+  border-radius: 1rem 0 0 1rem;
+  background: #0d1326;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.right-sidebar .all-sidebar .angel {
+  padding: 3.5rem 0;
+}
+
+.right-sidebar .all-sidebar .sidebar {
+  height: 24rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-top: 1px solid #41414d;
+}
+
+.right-sidebar .all-sidebar .sidebar a {
+  font-size: 1.6rem;
+  color: #e6ebff;
+  font-weight: 400;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.right-sidebar .all-sidebar .sidebar a i {
+  margin-bottom: 0.5rem;
+}
+
+.right-sidebar .all-sidebar .sidebar a:hover {
+  opacity: 1;
+}
+
+.right-sidebar i {
+  font-size: 1.6rem;
+  color: #e6ebff;
+  font-weight: 700;
+  opacity: 0.7;
+  display: block;
+}
+
+.right-sidebar .button-sidebar {
+  position: absolute;
+  top: 1rem;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  z-index: 100;
+  background: rgba(13, 19, 38, 0.5);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.right-sidebar .button-sidebar i {
+  line-height: 5rem;
+}
+
+.right-sidebar .animate-button {
+  -webkit-transform: translateX(50%) rotate(180deg);
+          transform: translateX(50%) rotate(180deg);
+}
+
+.right-sidebar .animate-sidebar {
+  -webkit-transform: translateX(105%);
+          transform: translateX(105%);
 }
 
 .footer {

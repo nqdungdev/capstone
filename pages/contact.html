@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpvision</title>
+    <title>Contact page - Corpvision - Corporate Category Website WordPress Theme</title>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
                     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-lg-auto title--night header__title">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./about.html">About</a>
@@ -67,26 +67,34 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Contact</a>
+                                <a class="nav-link active" href="./contact.html">Contact</a>
                             </li>
                         </ul>
                         <div class="header__right d-flex align-items-center">
                             <!-- search -->
                             <div class="btn header__search">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" id="js-search"></i>
                             </div>
                             <!-- change theme -->
                             <input type="checkbox" id="js-checkbox" class="d-none">
-                            <label for="js-checkbox" class="header__btn--theme text-body--day" id="js-change">
+                            <label for="js-checkbox" class="header__btn--theme header__title text-body--day" id="js-change">
                                 <i id="js-moon" class="fa fa-moon"></i>
                                 <i id="js-sun" class="fa fa-sun" style="display:none"></i>
                             </label>
+                        </div>
+                        <!-- search from -->
+                        <div class="header__search__form" style="visibility: hidden;">
+                            <i class="fa fa-times btn--close"></i>
+                            <form>
+                                <input name="search" placeholder="Start Typing" type="text">
+                            </form>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- BANNER -->
     <section class="banner">
         <div class="container w-100 h-100 text-center">
@@ -95,9 +103,26 @@
                 <p>We are an agency located in New York</p>
             </div>
         </div>
-        <div class="banner__overlay">
+        <div class="banner__overlay bg-overlay--day">
         </div>
     </section>
+
+    <!-- RIGHT-SIDEBAR -->
+    <div class="right-sidebar">
+        <div class="button-sidebar">
+            <i class="fa fa-angle-double-right"></i>
+        </div>
+        <div class="all-sidebar">
+            <div class="angel">
+            </div>
+            <div class="sidebar">
+                <a href="#"><i class="fa fa-arrow-left"></i>Back</a>
+                <a href="#"><i class="fa fa-download"></i>Download</a>
+                <a href="#"><i class="fa fa-shopping-cart"></i>Buy</a>
+            </div>
+        </div>
+    </div>
+
     <!-- CONTACT-SECTION -->
     <section class="contact-section bg--light">
         <header class="contact-section__title text-center mb-md-5 mb-4">
@@ -179,22 +204,22 @@
                 <form action="#">
                     <div class="row">
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="name" placeholder="Name">
+                            <input class="form-control input--light input--config bg--white" type="text" name="name" placeholder="Name">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="phone" placeholder="Your Phone Number">
+                            <input class="form-control input--light input--config bg--white" type="text" name="phone" placeholder="Your Phone Number">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="email" name="email" placeholder="Email*">
+                            <input class="form-control input--light input--config bg--white" type="email" name="email" placeholder="Email*">
                         </div>
                         <div class="col-6">
-                            <input class="form-control bg--white" type="text" name="subject" placeholder="Subject">
+                            <input class="form-control input--light input--config bg--white" type="text" name="subject" placeholder="Subject">
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control bg--white mt-3 mb-5" name="message" placeholder="Message*"></textarea>
+                            <textarea class="form-control input--light input--config bg--white mt-3 mb-5" name="message" placeholder="Message*"></textarea>
                         </div>
                         <div class="col-12 text-center text-lg-end">
-                            <button type="submit" class="btn btn-submit w-sm-100">
+                            <button type="submit" class="btn btn--success btn-submit w-sm-100">
                                 Submit Now</button>
                         </div>
                     </div>

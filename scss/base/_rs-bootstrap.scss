@@ -11,9 +11,9 @@
         &:hover {
             opacity: 1;
         }
-        &.active {
-            color: $tcSecondary !important;
-        }
+        // &.active {
+        // color: $tcSecondary !important;
+        // }
     }
     .dropdown-toggle::after {
         content: "\f107";
@@ -64,5 +64,10 @@
     }
     .navbar-toggler-icon {
         background-image: none;
+    }
+    @include responsive($lg) {
+        .navbar-nav {
+            padding-top: 2rem;
+        }
     }
 }
