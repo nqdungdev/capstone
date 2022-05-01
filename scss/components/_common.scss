@@ -29,6 +29,15 @@
     transition: all ease 0.3s;
 }
 
+.bg-servicepage {
+    background-color: rgba(29, 42, 55, 0.7);
+    transition: all ease 0.3s;
+}
+
+.bg-servicepage-change {
+    background-color: rgba(29, 42, 55, 0.8);
+}
+
 .bg-overlay--day {
     background-color: $bgOverlay-day;
     transition: all ease 0.3s;
@@ -168,5 +177,21 @@
     }
     @include responsive($md) {
         padding: 5.6rem 0;
+    }
+}
+
+.button-style {
+    padding: 1.5rem 5rem;
+    font-size: $fs3;
+    line-height: 1.8rem;
+    font-weight: $fwSemiBold;
+    border-radius: 0.8rem;
+    border: none;
+    background: $bgGreen-500;
+    color: $tcWhite;
+    transition: all 0.5s;
+    &:hover {
+        background-color: $bgGreen-700;
+        border-color: $bgGreen-800;
     }
 }

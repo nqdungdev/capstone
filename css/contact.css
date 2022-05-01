@@ -126,6 +126,12 @@ a {
   background-image: none;
 }
 
+@media screen and (max-width: 992px) {
+  .header .navbar-nav {
+    padding-top: 2rem;
+  }
+}
+
 .btn--modal {
   padding: 0;
 }
@@ -242,6 +248,16 @@ a {
   background-color: #100f19;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.bg-servicepage {
+  background-color: rgba(29, 42, 55, 0.7);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.bg-servicepage-change {
+  background-color: rgba(29, 42, 55, 0.8);
 }
 
 .bg-overlay--day {
@@ -434,6 +450,24 @@ a {
   }
 }
 
+.button-style {
+  padding: 1.5rem 5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  border: none;
+  background: #00a63f;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button-style:hover {
+  background-color: #008030;
+  border-color: #00732c;
+}
+
 .header {
   width: 100%;
   height: 10rem;
@@ -448,7 +482,7 @@ a {
 }
 
 .header__logo h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: inherit;
   font-weight: 600;
 }
@@ -602,6 +636,12 @@ a {
   transition: all ease 0.4s;
 }
 
+@media screen and (max-width: 1200px) {
+  .header h1 {
+    font-size: 3.2rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .header {
     height: -webkit-max-content !important;
@@ -612,6 +652,12 @@ a {
     position: absolute;
     top: 1rem;
     right: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header h1 {
+    font-size: 2.6rem;
   }
 }
 

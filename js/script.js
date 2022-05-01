@@ -7,6 +7,7 @@ const changeBg = (prevClass, nextClass) => {
         bgColor.classList.add(`${nextClass}`)
     }
 }
+
 const changeText = (prevClass, nextClass) => {
     let colors = document.querySelectorAll(`.${prevClass}`)
     for (let color of colors) {
@@ -25,7 +26,7 @@ const changeInput = (prevClass, nextClass) => {
 
 let headerBg = this.document.getElementById('header');
 let headerTitles = this.document.getElementsByClassName('header__title');
-let active = this.document.querySelector('.nav-link.active');
+let actives = this.document.querySelectorAll('.nav-link.active');
 
 const checkScroll = () => {
     if(document.documentElement.scrollTop < 50) {
@@ -33,7 +34,10 @@ const checkScroll = () => {
         headerBg.style.height = "10rem";
         headerBg.classList.remove('bg--white');
         headerBg.classList.remove('bg--dark');
-        active.setAttribute('style', 'color:inherit !important');
+        // active.setAttribute('style', 'color:inherit !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:inherit !important');
+        }
         for (let headerTitle of headerTitles) {
             headerTitle.classList.remove('title--day')
             headerTitle.classList.add('title--night')
@@ -52,25 +56,27 @@ const changeTheme = () => {
     if (checkBox.checked) {
         document.getElementById('js-moon').style.display = "none"
         document.getElementById('js-sun').style.display = "block"
-        document.getElementById('js-map').style.filter = "grayscale(100%)"
+        // document.getElementById('js-map').style.filter = "grayscale(100%)"
         changeBg("bg--white", "bg--dark")
         changeBg("bg--day", "bg--night")
         changeBg("bg--light", "bg--dark-1")
         changeBg("bg-overlay--day", "bg-overlay--night")
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
+        changeBg('bg-servicepage', 'bg-servicepage-change');
         changeInput("input--light", "input--dark")
         changeText("icon-alt--day", "icon-alt--night")
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
-        document.getElementById('js-map').style.filter = "grayscale(0%)"
+        // document.getElementById('js-map').style.filter = "grayscale(0%)"
         changeBg("bg--dark", "bg--white")
         changeBg("bg--night", "bg--day")
         changeBg("bg--dark-1", "bg--light")
         changeBg("bg-overlay--night", "bg-overlay--day")
         changeText("title--night", "title--day")
         changeText("text-body--night", "text-body--day")
+        changeBg('bg-servicepage-change', 'bg-servicepage');
         changeInput("input--dark", "input--light")
         changeText("icon-alt--night", "icon-alt--day")
     }
@@ -94,7 +100,10 @@ const scrollPage = () =>{
     if (document.documentElement.scrollTop >= 50) {
         headerBg.style.borderBottom = "none"
         headerBg.style.height = "8rem";
-        active.setAttribute('style', 'color:#009f4d !important');
+        // active.setAttribute('style', 'color:#009f4d !important');
+        for (let active of actives) {
+            active.setAttribute('style', 'color:#009f4d !important');
+        }
         if (checkBox.checked) {
             headerBg.classList.add('bg--dark');
             for (let headerTitle of headerTitles) {
@@ -197,3 +206,7 @@ buttonSideBar.addEventListener('click', function(){
     buttonSideBar.classList.toggle('animate-button');
     allSideBar.classList.toggle('animate-sidebar');
 })
+
+//services
+
+
