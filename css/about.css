@@ -342,6 +342,18 @@ a {
   letter-spacing: 1px;
 }
 
+.text-hover--success {
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.text-hover--success:hover {
+  color: #009f4d !important;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .btn--success {
   font-size: 1.6rem;
   color: #fff;
@@ -1046,17 +1058,8 @@ a {
 }
 
 .about-company__item h1 {
-  cursor: pointer;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
-}
-
-.about-company__item h1:hover {
-  color: #009f4d !important;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
 }
 
 @media screen and (max-width: 992px) {
@@ -1226,16 +1229,7 @@ a {
 
 .about-team__item__info h1 {
   margin: 2.5rem 0 0.5rem;
-  cursor: pointer;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
   font-size: 2rem;
-}
-
-.about-team__item__info h1:hover {
-  color: #009f4d !important;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
 }
 
 .about-team__item__info p {
@@ -1306,16 +1300,7 @@ a {
 
 .about-features__item h1 {
   margin-bottom: 1.2rem;
-  cursor: pointer;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
   font-size: 2.4rem;
-}
-
-.about-features__item h1:hover {
-  color: #009f4d !important;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
 }
 
 @media screen and (max-width: 992px) {
