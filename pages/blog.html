@@ -74,7 +74,7 @@
                         <div class="header__right d-flex align-items-center">
                             <!-- search -->
                             <div class="btn header__search">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" id="js-search"></i>
                             </div>
                             <!-- change theme -->
                             <input type="checkbox" id="js-checkbox" class="d-none">
@@ -82,6 +82,13 @@
                                 <i id="js-moon" class="fa fa-moon"></i>
                                 <i id="js-sun" class="fa fa-sun" style="display:none"></i>
                             </label>
+                        </div>
+                        <!-- search from -->
+                        <div class="header__search__form" style="visibility: hidden;">
+                            <i class="fa fa-times btn--close"></i>
+                            <form>
+                                <input name="search" placeholder="Start Typing" type="text">
+                            </form>
                         </div>
                     </div>
                 </div>
