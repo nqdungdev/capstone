@@ -36,7 +36,9 @@
 
 .bg-servicepage-change {
     background-color: rgba(29, 42, 55, 0.8);
+    transition: all ease 0.3s;
 }
+
 
 .bg-overlay--day {
     background-color: $bgOverlay-day;
@@ -93,6 +95,15 @@
     line-height: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.text-hover--success {
+    cursor: pointer;
+    transition: all ease 0.3s;
+    &:hover {
+        color: $tcSecondary !important;
+        transition: all ease 0.3s;
+    }
 }
 
 //button green
