@@ -162,6 +162,14 @@
     background: url(../img/bg1.jpg) center center / cover no-repeat;
     background-attachment: fixed;
     z-index: 20;
+    &__content {
+        max-width: 70rem;
+        margin: auto;
+        h1,
+        p {
+            color: $tcWhite !important;
+        }
+    }
     .btn--modal {
         margin-top: 2.4rem;
         transform: scale(1);

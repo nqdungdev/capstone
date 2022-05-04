@@ -1131,6 +1131,16 @@ a {
   z-index: 20;
 }
 
+.about-cover__content {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.about-cover__content h1,
+.about-cover__content p {
+  color: #fff !important;
+}
+
 .about-cover .btn--modal {
   margin-top: 2.4rem;
   -webkit-transform: scale(1);

@@ -83,11 +83,21 @@ const changeTheme = () => {
 
 const saveData = () => {
   localStorage.setItem("checked", JSON.stringify(checkBox.checked));
+  localStorage.setItem(
+    "scrollPoint",
+    JSON.stringify(document.documentElement.scrollTop)
+  );
 };
 const getData = () => {
   if (localStorage.getItem("checked")) {
     checkBox.checked = JSON.parse(localStorage.getItem("checked"));
     changeTheme();
+  }
+  if (localStorage.getItem("scrollPoint")) {
+    document.documentElement.scrollTop = JSON.parse(
+      localStorage.getItem("scrollPoint")
+    );
+    checkScroll();
   }
 };
 getData();
