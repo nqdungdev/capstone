@@ -41,3 +41,14 @@
         @content;
     }
 }
+
+//HOME PAGE 
+@mixin circle-seo($size, $color, $border-width, $right, $top) {
+    position: absolute;
+    @include size($size, $size);
+    border-radius: 50%;
+    border: $border-width solid $color;
+    right: $right;
+    top: $top;
+    z-index: 20;
+}

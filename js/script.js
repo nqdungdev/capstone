@@ -24,6 +24,7 @@ const changeInput = (prevClass, nextClass) => {
     }
 }
 
+
 let headerBg = this.document.getElementById('header');
 let headerTitles = this.document.getElementsByClassName('header__title');
 let actives = this.document.querySelectorAll('.nav-link.active');
@@ -64,8 +65,11 @@ const changeTheme = () => {
         changeText("title--day", "title--night")
         changeText("text-body--day", "text-body--night")
         changeBg('bg-servicepage', 'bg-servicepage-change');
-        changeInput("input--light", "input--dark")
-        changeText("icon-alt--day", "icon-alt--night")
+        changeInput("input--light", "input--dark");
+        changeText("icon-alt--day", "icon-alt--night");
+        changeBg("fill-white", "fill-black");
+        changeBg("border--day", "border--night");
+        
     } else {
         document.getElementById('js-moon').style.display = "block"
         document.getElementById('js-sun').style.display = "none"
@@ -79,6 +83,9 @@ const changeTheme = () => {
         changeBg('bg-servicepage-change', 'bg-servicepage');
         changeInput("input--dark", "input--light")
         changeText("icon-alt--night", "icon-alt--day")
+        changeBg("fill-black", "fill-white");
+        changeBg("border--night", "border--day");
+
     }
 }
 

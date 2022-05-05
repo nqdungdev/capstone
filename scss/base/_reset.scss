@@ -1,14 +1,16 @@
 // reset
 * {
-    font-family: 'Jost', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-    font-size: 10px;
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
 }
+
+
 h1,
 h2,
 h3,
@@ -16,19 +18,19 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
 }
 
 ul,
 ol {
-    padding: 0;
+  padding: 0;
 }
 
 ul li,
 ol li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
