@@ -1028,6 +1028,10 @@ a {
           transform: translateX(105%);
 }
 
+.z-index-min {
+  z-index: 15;
+}
+
 .footer {
   background: #151421;
 }

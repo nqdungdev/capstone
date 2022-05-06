@@ -1144,6 +1144,10 @@ a {
           transform: translateX(105%);
 }
 
+.z-index-min {
+  z-index: 15;
+}
+
 .elemnent__main {
   padding: 8rem 0;
 }

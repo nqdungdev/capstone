@@ -1078,6 +1078,10 @@ a {
           transform: translateX(105%);
 }
 
+.z-index-min {
+  z-index: 15;
+}
+
 .banner {
   background: url(../img/b1.jpg) top center/cover no-repeat;
   padding: 10rem 0;
