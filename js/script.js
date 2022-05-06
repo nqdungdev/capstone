@@ -222,7 +222,9 @@ mybutton.addEventListener("click", function () {
 // right-sidebar
 const allSideBar = document.querySelector(".all-sidebar");
 const buttonSideBar = document.querySelector(".button-sidebar");
+const rightSideBar = document.querySelector('.right-sidebar');
 buttonSideBar.addEventListener("click", function () {
   buttonSideBar.classList.toggle("animate-button");
   allSideBar.classList.toggle("animate-sidebar");
+  rightSideBar.classList.toggle("z-index-min");
 });

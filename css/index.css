@@ -1078,6 +1078,10 @@ a {
           transform: translateX(105%);
 }
 
+.z-index-min {
+  z-index: 15;
+}
+
 .distance-section {
   padding: 8rem 0;
 }
@@ -1196,10 +1200,6 @@ a {
 
 .gallery__main .row > * {
   padding: 0 1.5rem;
-}
-
-.gallery__main .row {
-  margin: 0 -1.5rem;
 }
 
 .gallery__main .row .item {
