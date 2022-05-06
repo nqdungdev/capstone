@@ -476,6 +476,19 @@
 .w-85 {
   width: 85%;
 }
-.modal{
-  background: none;
+.lb-dataContainer{
+  padding-top: 2rem;
+  .lb-data .lb-caption{
+    @include text($fs3, $tcWhite, $fwSemiBold);
+    line-height: 3rem;
+  }
+  .lb-data .lb-number{
+    font-size: $fs3;
+    color: $tcSecondary;
+    margin-top: 1.6rem;
+  }
 }
+.lb-nav a.lb-next, .lb-nav a.lb-prev{
+  width: 5rem;
+}
+

@@ -1718,7 +1718,24 @@ a {
   width: 85%;
 }
 
-.modal {
-  background: none;
+.lb-dataContainer {
+  padding-top: 2rem;
+}
+
+.lb-dataContainer .lb-data .lb-caption {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.lb-dataContainer .lb-data .lb-number {
+  font-size: 1.6rem;
+  color: #009f4d;
+  margin-top: 1.6rem;
+}
+
+.lb-nav a.lb-next, .lb-nav a.lb-prev {
+  width: 5rem;
 }
 /*# sourceMappingURL=index.css.map */
