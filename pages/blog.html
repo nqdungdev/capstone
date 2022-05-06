@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpvision</title>
+    <title>Blog Posts - Corpvision - Corporate Category Website WordPress Theme</title>
+    <link rel="shortcut icon" href="../img/icon/icon-website.png" type="image/x-icon">
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +40,7 @@
                     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-lg-auto title--night header__title">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./about.html">About</a>
@@ -48,12 +49,12 @@
                                 <a class="nav-link" href="./services.html">Services</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                     Pages
                                 </a>
                                 <ul class="dropdown-menu title--day bg--white">
                                     <li class="dropdown-item">
-                                        <a class="nav-link" href="./blog.html">Blog posts</a>
+                                        <a class="nav-link active" href="./blog.html">Blog posts</a>
                                     </li>
                                     <li class="dropdown-item">
                                         <a class="nav-link" href="./error.html">404 page</a>
@@ -73,7 +74,7 @@
                         <div class="header__right d-flex align-items-center">
                             <!-- search -->
                             <div class="btn header__search">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" id="js-search"></i>
                             </div>
                             <!-- change theme -->
                             <input type="checkbox" id="js-checkbox" class="d-none">
@@ -81,6 +82,13 @@
                                 <i id="js-moon" class="fa fa-moon"></i>
                                 <i id="js-sun" class="fa fa-sun" style="display:none"></i>
                             </label>
+                        </div>
+                        <!-- search from -->
+                        <div class="header__search__form" style="visibility: hidden;">
+                            <i class="fa fa-times btn--close"></i>
+                            <form>
+                                <input name="search" placeholder="Start Typing" type="text">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -92,8 +100,8 @@
     <section class="banner">
         <div class="container w-100 h-100 text-center">
             <div class="banner__content">
-                <h1>Error page</h1>
-                <p>Page cannot be found</p>
+                <h1>Blog posts</h1>
+                <p>Find all our latest news, insights, and events</p>
             </div>
         </div>
         <div class="banner__overlay bg-overlay--day">
@@ -117,7 +125,239 @@
     </div>
 
     <!-- BLOG-CONTENT -->
+    <section class="blog-content bg--light main">
+        <div class="container">
+            <div class="tab-content" id="nav-tabBlogContent">
+                <div class="tab-pane fade show active " id="nav-first">
+                    <div class="row blog-content__items">
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/blog1.jpg" class="img-fluid" alt="b1">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Startup Business</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Hello world! </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
 
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/blog2.jpg" class="img-fluid" alt="b2">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Startup Business</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Companies in NY launched a joint project on a three-tower hall </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/blog3.jpg" class="img-fluid" alt="b3">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Marketing strategy</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Design breakthrough upgrades the product and ready to launch </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/b3.jpg" class="img-fluid" alt="b3">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Web develop,ent</p>
+                                    <h1 class="title--day text-hover--success">
+                                        The fledgling company builds its business around AC motors </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0">
+                                    <a href="#">
+                                        <img src="../img/blog5.jpg" class="img-fluid" alt="b5">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Startup Business</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Business opportunity in developing a reliable electric motor. </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/blog4.jpg" class="img-fluid" alt="b4">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Marketing strategy</p>
+                                    <h1 class="title--day text-hover--success">
+                                        How to start a profitable home-based business within mins? </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-last">
+                    <div class="row blog-content__items">
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/b4.jpg" class="img-fluid" alt="b4">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Web development</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Simple Business Solutions has generated thousands of dollars </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 px-4 pb-5">
+                            <article class="card bg--white input--light blog-content__item h-100">
+                                <div class="card-header blog-content__img p-0 position-relative">
+                                    <a href="#">
+                                        <img src="../img/blog2.jpg" class="img-fluid" alt="b2">
+                                    </a>
+                                </div>
+                                <div class="card-body input--light blog-content__details">
+                                    <p class="text-body text-body--day">Web development</p>
+                                    <h1 class="title--day text-hover--success">
+                                        Hello World! </h1>
+                                </div>
+                                <div class="card-footer blog-content__author d-flex align-items-center justify-content-between">
+                                    <a href="#">
+                                        <img src="../img/icon/icon-web.jpeg" alt="w3" class="img-fluid rounded-circle">
+                                    </a>
+                                    <span class="text-body text-body--day">by
+                                        <a href="#" class="title--day text-hover--success">W3Layouts</a>
+                                    </span>
+                                    <span class="text-body text-body--day">
+                                        April 1, 2021
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="blog-content__pagination d-flex justify-content-center">
+            <div class="nav" id="nav-tab">
+                <button id="js-prev" class="btn btn--prev text-body text-body--day text-center input--light" style="display:none">Prev</button>
+                <button class="btn text-body text-body--day text-center input--light active" id="nav-first-tab" data-bs-toggle="tab" data-bs-target="#nav-first">1</button>
+                <button class="btn text-body text-body--day text-center input--light" id="nav-last-tab" data-bs-toggle="tab" data-bs-target="#nav-last">2</button>
+                <button id="js-next" class="btn btn--next text-body text-body--day text-center input--light">Next</button>
+            </div>
+        </div>
+
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -214,6 +454,38 @@
 
     <!-- SCRIPT -->
     <script src="../js/script.js"></script>
+    <script>
+        let btns = document.querySelectorAll('#nav-tab > button')
+        for (let btn of btns) {
+            btn.addEventListener('click', () => {
+                checkBtn()
+            })
+        }
+        let btnPrev = document.getElementById('js-prev')
+        let btnNext = document.getElementById('js-next')
+
+        const checkBtn = () => {
+            if (document.querySelector('#nav-first-tab.active')) {
+                btnPrev.style.display = 'none'
+            } else {
+                btnPrev.style.display = 'block'
+            }
+            if (document.querySelector('#nav-last-tab.active')) {
+                btnNext.style.display = 'none'
+            } else {
+                btnNext.style.display = 'block'
+            }
+        }
+        btnPrev.addEventListener('click', () => {
+            $("#nav-tab > .active").prev('button').trigger('click')
+            checkBtn()
+        })
+
+        btnNext.addEventListener('click', () => {
+            $("#nav-tab > .active").next('button').trigger('click')
+            checkBtn()
+        })
+    </script>
 </body>
 
 </html>

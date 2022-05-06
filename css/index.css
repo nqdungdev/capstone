@@ -531,6 +531,18 @@ a {
   letter-spacing: 1px;
 }
 
+.text-hover--success {
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.text-hover--success:hover {
+  color: #009f4d !important;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .btn--success {
   font-size: 1.6rem;
   color: #fff;

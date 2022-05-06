@@ -83,14 +83,14 @@
             cursor: initial;
         }
         h1 {
-            cursor: pointer;
-            transition: all ease 0.2s;
+            // cursor: pointer;
+            // transition: all ease 0.2s;
             font-size: $fs8;
             margin-bottom: 1.5rem;
-            &:hover {
-                color: $tcSecondary !important;
-                transition: all ease 0.2s;
-            }
+            // &:hover {
+            //     color: $tcSecondary !important;
+            //     transition: all ease 0.2s;
+            // }
         }
     }
     @include responsive($lg) {
@@ -162,6 +162,14 @@
     background: url(../img/bg1.jpg) center center / cover no-repeat;
     background-attachment: fixed;
     z-index: 20;
+    &__content {
+        max-width: 70rem;
+        margin: auto;
+        h1,
+        p {
+            color: $tcWhite !important;
+        }
+    }
     .btn--modal {
         margin-top: 2.4rem;
         transform: scale(1);
@@ -240,13 +248,13 @@
         &__info {
             h1 {
                 margin: 2.5rem 0 0.5rem;
-                cursor: pointer;
-                transition: all ease 0.2s;
+                // cursor: pointer;
+                // transition: all ease 0.2s;
                 font-size: $fs7;
-                &:hover {
-                    color: $tcSecondary !important;
-                    transition: all ease 0.2s;
-                }
+                // &:hover {
+                //     color: $tcSecondary !important;
+                //     transition: all ease 0.2s;
+                // }
             }
             p {
                 line-height: 2.7rem;
@@ -298,13 +306,13 @@
         }
         h1 {
             margin-bottom: 1.2rem;
-            cursor: pointer;
-            transition: all ease 0.2s;
+            // cursor: pointer;
+            // transition: all ease 0.2s;
             font-size: $fs12;
-            &:hover {
-                color: $tcSecondary !important;
-                transition: all ease 0.2s;
-            }
+            // &:hover {
+            //     color: $tcSecondary !important;
+            //     transition: all ease 0.2s;
+            // }
         }
     }
     @include responsive($lg) {
