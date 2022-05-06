@@ -23,9 +23,10 @@ const changeInput = (prevClass, nextClass) => {
   }
 };
 
-let headerBg = this.document.getElementById("header");
-let headerTitles = this.document.getElementsByClassName("header__title");
-let actives = this.document.querySelectorAll(".nav-link.active");
+
+let headerBg = this.document.getElementById('header');
+let headerTitles = this.document.getElementsByClassName('header__title');
+let actives = this.document.querySelectorAll('.nav-link.active');
 
 const checkScroll = () => {
   if (document.documentElement.scrollTop < 50) {
@@ -52,35 +53,41 @@ const checkScroll = () => {
 };
 
 const changeTheme = () => {
-  checkScroll();
-  if (checkBox.checked) {
-    document.getElementById("js-moon").style.display = "none";
-    document.getElementById("js-sun").style.display = "block";
-    // document.getElementById('js-map').style.filter = "grayscale(100%)"
-    changeBg("bg--white", "bg--dark");
-    changeBg("bg--day", "bg--night");
-    changeBg("bg--light", "bg--dark-1");
-    changeBg("bg-overlay--day", "bg-overlay--night");
-    changeText("title--day", "title--night");
-    changeText("text-body--day", "text-body--night");
-    changeBg("bg-servicepage", "bg-servicepage-change");
-    changeInput("input--light", "input--dark");
-    changeText("icon-alt--day", "icon-alt--night");
-  } else {
-    document.getElementById("js-moon").style.display = "block";
-    document.getElementById("js-sun").style.display = "none";
-    // document.getElementById('js-map').style.filter = "grayscale(0%)"
-    changeBg("bg--dark", "bg--white");
-    changeBg("bg--night", "bg--day");
-    changeBg("bg--dark-1", "bg--light");
-    changeBg("bg-overlay--night", "bg-overlay--day");
-    changeText("title--night", "title--day");
-    changeText("text-body--night", "text-body--day");
-    changeBg("bg-servicepage-change", "bg-servicepage");
-    changeInput("input--dark", "input--light");
-    changeText("icon-alt--night", "icon-alt--day");
-  }
-};
+    checkScroll()
+    if (checkBox.checked) {
+        document.getElementById('js-moon').style.display = "none"
+        document.getElementById('js-sun').style.display = "block"
+        // document.getElementById('js-map').style.filter = "grayscale(100%)"
+        changeBg("bg--white", "bg--dark")
+        changeBg("bg--day", "bg--night")
+        changeBg("bg--light", "bg--dark-1")
+        changeBg("bg-overlay--day", "bg-overlay--night")
+        changeText("title--day", "title--night")
+        changeText("text-body--day", "text-body--night")
+        changeBg('bg-servicepage', 'bg-servicepage-change');
+        changeInput("input--light", "input--dark");
+        changeText("icon-alt--day", "icon-alt--night");
+        changeBg("fill-white", "fill-black");
+        changeBg("border--day", "border--night");
+        
+    } else {
+        document.getElementById('js-moon').style.display = "block"
+        document.getElementById('js-sun').style.display = "none"
+        // document.getElementById('js-map').style.filter = "grayscale(0%)"
+        changeBg("bg--dark", "bg--white")
+        changeBg("bg--night", "bg--day")
+        changeBg("bg--dark-1", "bg--light")
+        changeBg("bg-overlay--night", "bg-overlay--day")
+        changeText("title--night", "title--day")
+        changeText("text-body--night", "text-body--day")
+        changeBg('bg-servicepage-change', 'bg-servicepage');
+        changeInput("input--dark", "input--light")
+        changeText("icon-alt--night", "icon-alt--day")
+        changeBg("fill-black", "fill-white");
+        changeBg("border--night", "border--day");
+
+    }
+}
 
 const saveData = () => {
   localStorage.setItem("checked", JSON.stringify(checkBox.checked));

@@ -49,6 +49,22 @@
     background-color: $bgOverlay-night;
     transition: all ease 0.3s;
 }
+.fill-white{
+    fill: $bgWhite;
+    transition: all ease 0.3s;
+}
+.fill-black{
+    fill: $bgDark !important;
+    transition: all ease 0.3s;
+}
+.border--day{
+    border-color: #eee;
+    transition: all ease 0.3s;
+}
+.border--night{
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    transition: all ease 0.3s;
+}
 
 //text color
 .text-body {
@@ -177,8 +193,9 @@
         // background: $bgSecondary;
         // text-align: center;
         // border-radius: 50%;
-        z-index: 10;
+        z-index: 26;
     }
+    
 }
 
 .main {
@@ -202,7 +219,11 @@
     color: $tcWhite;
     transition: all 0.5s;
     &:hover {
+        color: $tcWhite;
         background-color: $bgGreen-700;
         border-color: $bgGreen-800;
+    }
+    @include responsive($sm) {
+        padding: 1.2rem 3rem;
     }
 }
