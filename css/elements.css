@@ -1,5 +1,5 @@
 * {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -91,6 +91,30 @@ a {
 
 .bg-overlay--night {
   background-color: rgba(29, 42, 55, 0.8);
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.fill-white {
+  fill: #fff;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.fill-black {
+  fill: #151421 !important;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.border--day {
+  border-color: #eee;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.border--night {
+  border-color: rgba(255, 255, 255, 0.1) !important;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
@@ -266,7 +290,7 @@ a {
   transition: all ease 0.4s;
   right: 2rem;
   bottom: 2rem;
-  z-index: 10;
+  z-index: 26;
 }
 
 .main {
@@ -299,8 +323,15 @@ a {
 }
 
 .button-style:hover {
+  color: #fff;
   background-color: #008030;
   border-color: #00732c;
+}
+
+@media screen and (max-width: 576px) {
+  .button-style {
+    padding: 1.2rem 3rem;
+  }
 }
 
 .header .nav-item {
@@ -480,6 +511,171 @@ a {
   width: 100%;
   height: 42rem;
   border-radius: 1rem;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .carousel-control-next-icon,
+.slider .carousel-control-prev-icon {
+  display: none;
+}
+
+.slider .carousel-control-prev,
+.slider .carousel-control-next {
+  top: auto;
+  left: auto;
+  bottom: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 0;
+  position: absolute;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 19;
+}
+
+.slider .carousel-control-prev i,
+.slider .carousel-control-next i {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 1.6rem;
+  color: #3f3a64;
+  line-height: 46px;
+  text-align: center;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.slider .carousel-control-prev {
+  right: 10rem;
+}
+
+.slider .carousel-control-next {
+  right: 3rem;
+}
+
+.slider .carousel-fade .carousel-item {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.slider .item {
+  height: 80rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.slider .item .container {
+  position: relative;
+  bottom: 3.7rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 20;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slider .item .container h1 {
+  max-width: 80rem;
+  font-size: 6.5rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .slider .item .container h1 {
+    font-size: 4.5rem;
+  }
+}
+
+.slider .item .container p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 3rem;
+  max-width: 60rem;
+  opacity: 0.9;
+  letter-spacing: 0.2px;
+}
+
+.slider .item .container .btn-slider {
+  margin-top: 2rem;
+}
+
+.slider .item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.slider .item h1 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.slider .item-1 {
+  background-image: url(../../img/b1.jpg);
+}
+
+.slider .item-2 {
+  background-image: url(../../img/b2.jpg);
+}
+
+.slider .item-3 {
+  background-image: url(../../img/b3-1536x873.jpg);
+}
+
+.slider .item-4 {
+  background-image: url(../../img/b4.jpg);
+}
+
+.slider .shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+}
+
+.slider .shape path {
+  fill: #fff;
 }
 
 .header {
