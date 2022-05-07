@@ -1155,7 +1155,7 @@ a {
 
 .blog-content__img {
   overflow: hidden;
-  min-height: 22rem;
+  min-height: 23.2rem;
 }
 
 .blog-content__img img {
@@ -1228,5 +1228,11 @@ a {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .blog-content__img {
+    min-height: 22rem;
+  }
 }
 /*# sourceMappingURL=blog.css.map */
