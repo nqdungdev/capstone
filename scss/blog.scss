@@ -18,6 +18,7 @@
     &__img {
         overflow: hidden;
         min-height: 23.2rem;
+        height: 23.2rem;
         img {
             @include size(100%, 100%);
             transform: scale(1);
@@ -77,6 +78,12 @@
     @include responsive($xl) {
         &__img {
             min-height: 22rem;
+            height: 22rem;
+        }
+    }
+    @include responsive($md) {
+        &__img {
+            height: auto;
         }
     }
 }

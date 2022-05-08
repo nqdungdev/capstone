@@ -429,6 +429,11 @@ a {
   .header .navbar-nav {
     padding-top: 2rem;
   }
+  .header .dropdown-menu {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
 }
 
 .btn--modal {

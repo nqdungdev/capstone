@@ -130,6 +130,11 @@ a {
   .header .navbar-nav {
     padding-top: 2rem;
   }
+  .header .dropdown-menu {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
 }
 
 .btn--modal {
@@ -1163,6 +1168,7 @@ a {
 .blog-content__img {
   overflow: hidden;
   min-height: 23.2rem;
+  height: 23.2rem;
 }
 
 .blog-content__img img {
@@ -1241,6 +1247,13 @@ a {
 @media screen and (max-width: 1200px) {
   .blog-content__img {
     min-height: 22rem;
+    height: 22rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-content__img {
+    height: auto;
   }
 }
 /*# sourceMappingURL=blog.css.map */
