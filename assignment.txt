@@ -1,0 +1,2 @@
+Quang Dũng: Header, About page, Blog page, Contact page, Error page
+Quốc Vũ: Footer, Home page, Services page, Element page, Right sidebar
