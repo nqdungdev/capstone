@@ -1,2 +1,2 @@
-Quang Dũng: Header, About page, Blog page, Contact page, Error page, Landing page
+Quang Dũng: Header, About page, Blog page, Contact page, Error page, Landing page 
 Quốc Vũ: Footer, Home page, Services page, Element page, Right sidebar, Landing page
