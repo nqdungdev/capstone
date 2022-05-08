@@ -879,6 +879,7 @@ a {
   border-width: 1px 0;
   border-style: solid;
   border-color: rgba(249, 249, 249, 0.1);
+  padding: 7.2rem 0;
 }
 
 .footer .footer__main .container .item .footer__brand {
@@ -987,6 +988,12 @@ a {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .footer .footer__main {
+    padding: 4.8rem 0;
+  }
+}
+
 .right-sidebar {
   position: fixed;
   right: 0;
@@ -1083,7 +1090,19 @@ a {
 }
 
 .distance-section {
-  padding: 8rem 0;
+  padding: 9.6rem 0;
+}
+
+@media screen and (max-width: 992px) {
+  .distance-section {
+    padding: 7.2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .distance-section {
+    padding: 5.6rem 0;
+  }
 }
 
 .radius-img {
@@ -1144,12 +1163,6 @@ a {
           transform: translateY(-0.5rem);
   -webkit-box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
           box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .service {
-    padding: 4rem 0;
-  }
 }
 
 .service .row .item {
@@ -1543,7 +1556,8 @@ a {
   margin-top: 1rem;
 }
 
-.feedback__main .container .owl-theme .owl-dots .owl-dot.active span, .feedback__main .container .owl-theme .owl-dots .owl-dot:hover span {
+.feedback__main .container .owl-theme .owl-dots .owl-dot.active span,
+.feedback__main .container .owl-theme .owl-dots .owl-dot:hover span {
   background: #213364;
   opacity: 1;
   -webkit-transform: scale(1.5);
@@ -1559,13 +1573,14 @@ a {
 }
 
 .news__main .row .item {
-  border: 1px solid transparent;
+  overflow: hidden;
+  border-radius: 0.4rem;
   -webkit-box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.04);
   background: none;
 }
 
-.news__main .row .item:hover img {
+.news__main .row .item:hover > a img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 0.3s ease-in-out;
@@ -1627,7 +1642,6 @@ a {
 
 .news__main .row .item .card-footer .middle {
   text-align: left;
-  width: 50%;
 }
 
 .news__main .row .item .card-footer .middle span {
@@ -1747,7 +1761,8 @@ a {
   margin-top: 1.6rem;
 }
 
-.lb-nav a.lb-next, .lb-nav a.lb-prev {
+.lb-nav a.lb-next,
+.lb-nav a.lb-prev {
   width: 5rem;
 }
 /*# sourceMappingURL=index.css.map */

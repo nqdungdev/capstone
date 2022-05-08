@@ -879,6 +879,7 @@ a {
   border-width: 1px 0;
   border-style: solid;
   border-color: rgba(249, 249, 249, 0.1);
+  padding: 7.2rem 0;
 }
 
 .footer .footer__main .container .item .footer__brand {
@@ -985,6 +986,12 @@ a {
 .footer footer p a:hover {
   color: #fff;
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer__main {
+    padding: 4.8rem 0;
+  }
 }
 
 .banner {
@@ -1148,19 +1155,15 @@ a {
   z-index: 15;
 }
 
-.elemnent__main {
-  padding: 8rem 0;
-}
-
-.elemnent__main p {
+.element__main p {
   opacity: 0.8;
 }
 
-.elemnent__main pre {
+.element__main pre {
   padding: 2rem;
 }
 
-.elemnent__main code {
+.element__main code {
   font-size: 1.6rem;
   color: #666;
   font-weight: 400;
@@ -1168,81 +1171,81 @@ a {
   opacity: 1;
 }
 
-.elemnent__main .jumbotron .jumbotron-1 {
+.element__main .jumbotron .jumbotron-1 {
   margin-bottom: 6rem;
   padding: 6.2rem 3.5rem;
   border-radius: 0.8rem;
 }
 
-.elemnent__main .jumbotron .jumbotron-1 h1 {
+.element__main .jumbotron .jumbotron-1 h1 {
   font-size: calc(2.35rem + 2.25vw);
   font-weight: 300;
 }
 
-.elemnent__main .jumbotron .jumbotron-1 span {
+.element__main .jumbotron .jumbotron-1 span {
   font-weight: 300;
   font-size: 2rem;
   opacity: 0.8;
 }
 
-.elemnent__main .jumbotron .jumbotron-2 {
+.element__main .jumbotron .jumbotron-2 {
   padding: 2rem;
 }
 
-.elemnent__main .fluid .fluid-1 {
+.element__main .fluid .fluid-1 {
   padding: 6.2rem 2rem;
   margin-bottom: 4rem;
 }
 
-.elemnent__main .fluid .fluid-1 h1 {
+.element__main .fluid .fluid-1 h1 {
   font-size: calc(2.35rem + 2.25vw);
   font-weight: 300;
 }
 
-.elemnent__main .fluid .fluid-1 p {
+.element__main .fluid .fluid-1 p {
   font-weight: 300;
   font-size: 2rem;
 }
 
-.elemnent__main .fluid .fluid-2 {
+.element__main .fluid .fluid-2 {
   padding: 2rem;
 }
 
-.elemnent__main .card-deck .row .item h1 {
+.element__main .card-deck .row .item h1 {
   font-size: 2rem;
   color: #3f3a64;
   font-weight: 400;
   margin-bottom: 2rem;
 }
 
-.elemnent__main .card-deck .row .item p:last-child {
+.element__main .card-deck .row .item p:last-child {
   color: #6c757d;
   font-weight: 400;
   font-size: 1.4rem;
 }
 
-.elemnent__main .breadcrumbs .breadcrumb {
+.element__main .breadcrumbs .breadcrumb {
   padding: 1.3rem 1.6rem;
   margin-bottom: 1.6rem;
   border-radius: 0.5rem;
 }
 
-.elemnent__main .buttons .btn {
+.element__main .buttons .btn {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
 }
 
-.elemnent__main .outline-buttons .btn {
+.element__main .outline-buttons .btn {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
 }
 
-.elemnent__main .buttons-tag .btn {
+.element__main .buttons-tag .btn {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
 }
 
-.elemnent__main .buttons-tag .btn-change {
+.element__main .buttons-tag .btn-change {
   border: 1px solid;
   border-radius: 3px;
   background-color: #e6e6e6;
@@ -1251,57 +1254,57 @@ a {
   border-color: #ccc #ccc #bbb;
 }
 
-.elemnent__main .buttons-tag .btn-change:hover {
+.element__main .buttons-tag .btn-change:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
 
-.elemnent__main .buttons-tag .btn-change:focus {
+.element__main .buttons-tag .btn-change:focus {
   background-color: #0b5ed7;
   color: #fff;
 }
 
-.elemnent__main .modal-popup button {
+.element__main .modal-popup button {
   padding: 1rem 3rem;
   font-size: 1.6rem;
   border-radius: 0.6rem;
 }
 
-.elemnent__main .modal-center button {
+.element__main .modal-center button {
   padding: 1rem 3rem;
   font-size: 1.6rem;
   border-radius: 0.6rem;
 }
 
-.elemnent__main .modal-change {
+.element__main .modal-change {
   font-size: 1.6rem;
 }
 
-.elemnent__main .alert {
+.element__main .alert {
   padding: 1.2rem 2rem;
 }
 
-.elemnent__main .progress {
+.element__main .progress {
   height: 1.6rem;
 }
 
-.elemnent__main .form-control {
+.element__main .form-control {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
   border-radius: 0.8rem;
 }
 
-.elemnent__main .input-group-text {
+.element__main .input-group-text {
   font-size: 1.6rem;
 }
 
-.elemnent__main .input-forms button {
+.element__main .input-forms button {
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
 }
 
-.elemnent__main .media {
+.element__main .media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1310,16 +1313,18 @@ a {
           align-items: flex-start;
 }
 
-.elemnent__main .media img {
+.element__main .media img {
   width: 5rem;
   display: block;
 }
 
-.elemnent__main .media-object .title, .elemnent__main .nesting .title {
+.element__main .media-object .title,
+.element__main .nesting .title {
   font-size: 2.4rem;
 }
 
-.elemnent__main .media-object h1, .elemnent__main .nesting h1 {
+.element__main .media-object h1,
+.element__main .nesting h1 {
   font-size: 2rem;
   color: #3f3a64;
   font-weight: 600;

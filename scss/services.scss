@@ -9,9 +9,8 @@
 @import "./components/footer";
 @import "./components/right-sidebar";
 @import "./components/banner";
-
 .introduction {
-    padding: 10rem 0;
+    // padding: 10rem 0;
     &__header {
         h1 {
             padding: 0 20%;
@@ -36,12 +35,15 @@
 }
 
 .service {
-    padding: 10rem 0;
+    // padding: 10rem 0;
     &__main {
         .item {
             padding: 5rem 3rem;
             display: flex;
             justify-content: space-between;
+            //---------------------
+            border-radius: 0.8rem;
+            //---------------------
             i {
                 font-size: 3.8rem;
                 color: $tcSecondary;
@@ -64,7 +66,7 @@
 }
 
 .contact {
-    padding: 9rem 0;
+    // padding: 9rem 0;
     background: url(../img/bg1.jpg) center center / cover no-repeat;
     position: relative;
     .contact__overlay {
@@ -162,7 +164,7 @@
             padding: 0 20%;
         }
     }
-    padding: 10rem 0;
+    // padding: 10rem 0;
     &__main {
         .item {
             &:hover {

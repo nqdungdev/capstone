@@ -64,6 +64,7 @@
             &:hover,
             &.active {
                 background-color: $bgSecondary;
+                color: white !important;
                 border-color: $bgSecondary;
                 transition: all ease 0.4s;
             }
